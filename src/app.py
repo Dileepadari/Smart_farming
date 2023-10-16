@@ -19,6 +19,11 @@ def home():
 @app.route('/statistics', methods=['GET','POST'])
 def statistics():
     return render_template('index.html', file = "statistics.html", open2="open")
+    
+    
+@app.route('/about', methods=['GET','POST'])
+def about():
+    return render_template('index.html', file = "about.html", open3="open")
 
 # @app.route('/statitics', methods=['GET','POST'])
 # def statistics():

@@ -19,14 +19,20 @@ def home():
 @app.route('/statistics', methods=['GET','POST'])
 def statistics():
     return render_template('index.html', file = "statistics.html", open2="open")
-<<<<<<< HEAD
-=======
     
+@app.route('/analysis', methods=['GET','POST'])
+def analysis():
+    headers = {'X-M2M-Origin': 'admin:admin', "Content-Type": "application/json;ty=4"}
+    link = "https://api.thingspeak.com/channels/2281910/feeds.json?results=2"
+    response = requests.get(link, headers=headers)
+    response = json.loads(response.text)
+    print(response)
+    return render_template('index.html', data = response, file = "analysis.html", open3="open")
     
 @app.route('/about', methods=['GET','POST'])
 def about():
-    return render_template('index.html', file = "about.html", open3="open")
->>>>>>> refs/remotes/origin/main
+    return render_template('index.html', file = "about.html", open4="open")
+
 
 # @app.route('/statitics', methods=['GET','POST'])
 # def statistics():
@@ -43,15 +49,8 @@ def about():
 # @app.route('/statitics', methods=['GET','POST'])
 # def statistics():
 #     return render_template('statistics.html')
-
-
-
 
 
 
 if __name__ == '__main__':
-<<<<<<< HEAD
     app.run(debug=True)
-=======
-    app.run(debug=True)
->>>>>>> refs/remotes/origin/main

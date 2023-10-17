@@ -155,7 +155,7 @@
           <div class="card">
             <div class="card-body">
               <div class="sales-info">
-                <h3>179</h3>
+                <h3>{{ data['feeds'][1]['field5'] }}</h3>
                 <span>
                   <i class="lni-alarm-clock"></i>&nbsp;Carbondioxide
                 </span>
@@ -164,11 +164,11 @@
                 <div
                   class="progress-bar bg-purple"
                   role="progressbar"
-                  aria-valuenow="35"
-                  style="width: 35%"
+                  aria-valuenow="{{ data['feeds'][1]['field5'] }}"
+                  style="width: {{ data['feeds'][1]['field5'] }}%"
                 ></div>
               </div>
-              <p>3% higher than the average</p>
+              <p>{{ data['feeds'][1]['field5'] }}% higher than the average</p>
             </div>
           </div>
         </div>

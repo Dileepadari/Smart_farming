@@ -5,10 +5,6 @@ Website: www.uideck.com
 File: Main Css File
 */
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/main
 html {
   overflow-x: hidden;
 }
@@ -27,16 +23,12 @@ body {
   overflow-x: hidden;
 }
 
-<<<<<<< HEAD
-h1, h2, h3, h4, h5, h6 {
-=======
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
->>>>>>> refs/remotes/origin/main
   color: #515365;
   font-weight: normal;
   line-height: 1.5;
@@ -89,23 +81,15 @@ p {
   line-height: 1.8;
 }
 
-<<<<<<< HEAD
-ul, ol {
-=======
 ul,
 ol {
->>>>>>> refs/remotes/origin/main
   list-style: outside none none;
   margin: 0;
   padding: 0;
 }
 
-<<<<<<< HEAD
-ul li, ol li {
-=======
 ul li,
 ol li {
->>>>>>> refs/remotes/origin/main
   list-style: none;
 }
 
@@ -409,12 +393,8 @@ hr {
   margin: 0 auto;
 }
 
-<<<<<<< HEAD
-#loader-1:before, #loader-1:after {
-=======
 #loader-1:before,
 #loader-1:after {
->>>>>>> refs/remotes/origin/main
   content: "";
   position: absolute;
   top: -10px;
@@ -442,10 +422,6 @@ hr {
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/main
   100% {
     -webkit-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
@@ -458,10 +434,6 @@ hr {
   from {
     opacity: 0;
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/main
   to {
     opacity: 1;
   }
@@ -471,10 +443,6 @@ hr {
   from {
     opacity: 0;
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/main
   to {
     opacity: 1;
   }
@@ -521,25 +489,14 @@ hr {
   text-align: center;
 }
 
-<<<<<<< HEAD
-.header .header-container .nav-left, .header .header-container .nav-right {
-=======
 .header .header-container .nav-left,
 .header .header-container .nav-right {
->>>>>>> refs/remotes/origin/main
   position: relative;
   list-style: none;
   padding-left: 0;
   margin-bottom: 0px;
 }
 
-<<<<<<< HEAD
-.header .header-container .nav-left > li, .header .header-container .nav-right > li {
-  float: left;
-}
-
-.header .header-container .nav-left > li > a, .header .header-container .nav-right > li > a {
-=======
 .header .header-container .nav-left>li,
 .header .header-container .nav-right>li {
   float: left;
@@ -547,7 +504,6 @@ hr {
 
 .header .header-container .nav-left>li>a,
 .header .header-container .nav-right>li>a {
->>>>>>> refs/remotes/origin/main
   padding: 0 6px;
   line-height: calc(65px - 3px);
   min-height: calc(65px - 3px);
@@ -560,12 +516,8 @@ hr {
   -ms-transition: all 0.2s ease-in-out;
 }
 
-<<<<<<< HEAD
-.header .header-container .nav-left > li > a i, .header .header-container .nav-right > li > a i {
-=======
 .header .header-container .nav-left>li>a i,
 .header .header-container .nav-right>li>a i {
->>>>>>> refs/remotes/origin/main
   font-size: 18px;
   vertical-align: middle;
   color: #ffffff;
@@ -580,46 +532,30 @@ hr {
   -ms-transition: all 0.3s ease-in-out;
 }
 
-<<<<<<< HEAD
-.header .header-container .nav-left > li > a i:hover, .header .header-container .nav-left > li > a i:focus {
-=======
 .header .header-container .nav-left>li>a i:hover,
 .header .header-container .nav-left>li>a i:focus {
->>>>>>> refs/remotes/origin/main
   text-decoration: none;
   background: #e22a6f;
   border-color: #e22a6f;
   color: #fff;
 }
 
-<<<<<<< HEAD
-.header .header-container .nav-right > li > a i:hover, .header .header-container .nav-right > li > a i:focus {
-=======
 .header .header-container .nav-right>li>a i:hover,
 .header .header-container .nav-right>li>a i:focus {
->>>>>>> refs/remotes/origin/main
   text-decoration: none;
   background: #e22a6f;
   border-color: #e22a6f;
   color: #fff;
 }
 
-<<<<<<< HEAD
-.header .header-container .nav-left > li > a.dropdown-toggle:after, .header .header-container .nav-right > li > a.dropdown-toggle:after {
-=======
 .header .header-container .nav-left>li>a.dropdown-toggle:after,
 .header .header-container .nav-right>li>a.dropdown-toggle:after {
->>>>>>> refs/remotes/origin/main
   display: none;
   border-radius: 0px;
 }
 
-<<<<<<< HEAD
-.header .header-container .nav-left .user-profile .profile-img, .header .header-container .nav-right .user-profile .profile-img {
-=======
 .header .header-container .nav-left .user-profile .profile-img,
 .header .header-container .nav-right .user-profile .profile-img {
->>>>>>> refs/remotes/origin/main
   width: 40px;
   border-radius: 50%;
   margin-top: 12px;
@@ -683,12 +619,8 @@ hr {
   color: #8a8a8a;
 }
 
-<<<<<<< HEAD
-.dropdown-menu li a:hover, .dropdown-menu li a:focus {
-=======
 .dropdown-menu li a:hover,
 .dropdown-menu li a:focus {
->>>>>>> refs/remotes/origin/main
   color: #515365;
   text-decoration: none;
   background-color: #f7f7f8;
@@ -719,17 +651,6 @@ hr {
   color: #99abb4;
 }
 
-<<<<<<< HEAD
-.side-nav-dark .side-nav .side-nav-inner .side-nav-menu li a:hover .title, .side-nav-dark .side-nav .side-nav-inner .side-nav-menu li a:hover .arrow, .side-nav-dark .side-nav .side-nav-inner .side-nav-menu li a:hover .icon-holder {
-  color: #ffffff;
-}
-
-.side-nav-dark .side-nav .side-nav-inner .side-nav-menu li a:focus .title, .side-nav-dark .side-nav .side-nav-inner .side-nav-menu li a:focus .arrow, .side-nav-dark .side-nav .side-nav-inner .side-nav-menu li a:focus .icon-holder {
-  color: #ffffff;
-}
-
-.side-nav-dark .side-nav .side-nav-inner .side-nav-menu li.dropdown.open a .title, .side-nav-dark .side-nav .side-nav-inner .side-nav-menu li.dropdown.open a .arrow, .side-nav-dark .side-nav .side-nav-inner .side-nav-menu li.dropdown.open a .icon-holder {
-=======
 .side-nav-dark .side-nav .side-nav-inner .side-nav-menu li a:hover .title,
 .side-nav-dark .side-nav .side-nav-inner .side-nav-menu li a:hover .arrow,
 .side-nav-dark .side-nav .side-nav-inner .side-nav-menu li a:hover .icon-holder {
@@ -745,7 +666,6 @@ hr {
 .side-nav-dark .side-nav .side-nav-inner .side-nav-menu li.dropdown.open a .title,
 .side-nav-dark .side-nav .side-nav-inner .side-nav-menu li.dropdown.open a .arrow,
 .side-nav-dark .side-nav .side-nav-inner .side-nav-menu li.dropdown.open a .icon-holder {
->>>>>>> refs/remotes/origin/main
   color: #ffffff;
 }
 
@@ -753,12 +673,8 @@ hr {
   background: #192532;
 }
 
-<<<<<<< HEAD
-.side-nav-dark .side-nav .side-nav-inner .side-nav-menu li.dropdown ul.dropdown-menu li a:hover, .side-nav-dark .side-nav .side-nav-inner .side-nav-menu li.dropdown ul.dropdown-menu li a:focus {
-=======
 .side-nav-dark .side-nav .side-nav-inner .side-nav-menu li.dropdown ul.dropdown-menu li a:hover,
 .side-nav-dark .side-nav .side-nav-inner .side-nav-menu li.dropdown ul.dropdown-menu li a:focus {
->>>>>>> refs/remotes/origin/main
   color: #ffffff;
 }
 
@@ -853,12 +769,8 @@ hr {
   -ms-transition: all 0.3s ease;
 }
 
-<<<<<<< HEAD
-.side-nav .side-nav-inner .side-nav-menu li a:hover, .side-nav .side-nav-inner .side-nav-menu li a:focus {
-=======
 .side-nav .side-nav-inner .side-nav-menu li a:hover,
 .side-nav .side-nav-inner .side-nav-menu li a:focus {
->>>>>>> refs/remotes/origin/main
   text-decoration: none;
   color: #ffffff;
   transition: all 0.3s ease;
@@ -868,12 +780,8 @@ hr {
   -ms-transition: all 0.3s ease;
 }
 
-<<<<<<< HEAD
-.side-nav .side-nav-inner .side-nav-menu li a:hover .icon-holder, .side-nav .side-nav-inner .side-nav-menu li a:focus .icon-holder {
-=======
 .side-nav .side-nav-inner .side-nav-menu li a:hover .icon-holder,
 .side-nav .side-nav-inner .side-nav-menu li a:focus .icon-holder {
->>>>>>> refs/remotes/origin/main
   color: #ffffff;
 }
 
@@ -905,12 +813,8 @@ hr {
   padding: 10px 15px;
 }
 
-<<<<<<< HEAD
-.side-nav .side-nav-inner .side-nav-menu li.dropdown ul.dropdown-menu li a:hover, .side-nav .side-nav-inner .side-nav-menu li.dropdown ul.dropdown-menu li a:focus {
-=======
 .side-nav .side-nav-inner .side-nav-menu li.dropdown ul.dropdown-menu li a:hover,
 .side-nav .side-nav-inner .side-nav-menu li.dropdown ul.dropdown-menu li a:focus {
->>>>>>> refs/remotes/origin/main
   background-color: transparent;
   color: #515365;
 }
@@ -944,11 +848,7 @@ hr {
   vertical-align: middle;
 }
 
-<<<<<<< HEAD
-.side-nav .side-nav-inner .side-nav-menu li.dropdown.open > a {
-=======
 .side-nav .side-nav-inner .side-nav-menu li.dropdown.open>a {
->>>>>>> refs/remotes/origin/main
   color: #fff;
   background: #e22a6f;
 }
@@ -997,45 +897,11 @@ hr {
   display: none;
 }
 
-<<<<<<< HEAD
-.side-nav-folded .header .nav-left > li > a.sidenav-fold-toggler i:before {
-=======
 .side-nav-folded .header .nav-left>li>a.sidenav-fold-toggler i:before {
->>>>>>> refs/remotes/origin/main
   content: "\e914";
 }
 
 @media only screen and (min-width: 992px) {
-<<<<<<< HEAD
-  .side-nav-folded .side-nav .side-nav-inner .side-nav-menu > li.side-nav-header {
-    display: none;
-  }
-  .side-nav-folded .side-nav .side-nav-inner .side-nav-menu > li > a {
-    padding-left: 20px;
-  }
-  .side-nav-folded .side-nav .side-nav-inner .side-nav-menu > li > a .title {
-    display: none;
-  }
-  .side-nav-folded .side-nav .side-nav-inner .side-nav-menu li.dropdown .arrow {
-    opacity: 0;
-  }
-  .side-nav-folded .side-nav .side-nav-inner .side-nav-menu li.dropdown.open ul.dropdown-menu {
-    display: none !important;
-  }
-  .side-nav-folded .side-nav:hover {
-    width: 250px;
-  }
-  .side-nav-folded .side-nav:hover .side-nav-inner .side-nav-menu > li .side-nav-header {
-    display: block;
-  }
-  .side-nav-folded .side-nav:hover .side-nav-inner .side-nav-menu > li > a .title {
-    display: inline-block;
-  }
-  .side-nav-folded .side-nav:hover .side-nav-inner .side-nav-menu li.dropdown .arrow {
-    opacity: 1;
-  }
-  .side-nav-folded .side-nav:hover .side-nav-inner .side-nav-menu li.open > ul.dropdown-menu {
-=======
   .side-nav-folded .side-nav .side-nav-inner .side-nav-menu>li.side-nav-header {
     display: none;
   }
@@ -1073,20 +939,11 @@ hr {
   }
 
   .side-nav-folded .side-nav:hover .side-nav-inner .side-nav-menu li.open>ul.dropdown-menu {
->>>>>>> refs/remotes/origin/main
     display: block !important;
   }
 }
 
 @media only screen and (min-width: 767px) {
-<<<<<<< HEAD
-  .header .header-container .nav-left > li > a.sidenav-fold-toggler,
-  .header .header-container .nav-right > li > a.sidenav-fold-toggler {
-    display: block;
-  }
-  .header .header-container .nav-left > li > a.sidenav-expand-toggler,
-  .header .header-container .nav-right > li > a.sidenav-expand-toggler {
-=======
 
   .header .header-container .nav-left>li>a.sidenav-fold-toggler,
   .header .header-container .nav-right>li>a.sidenav-fold-toggler {
@@ -1095,20 +952,11 @@ hr {
 
   .header .header-container .nav-left>li>a.sidenav-expand-toggler,
   .header .header-container .nav-right>li>a.sidenav-expand-toggler {
->>>>>>> refs/remotes/origin/main
     display: none;
   }
 }
 
 @media only screen and (max-width: 767px) {
-<<<<<<< HEAD
-  .header .header-container .nav-left > li > a.sidenav-fold-toggler,
-  .header .header-container .nav-right > li > a.sidenav-fold-toggler {
-    display: none;
-  }
-  .header .header-container .nav-left > li > a.sidenav-expand-toggler,
-  .header .header-container .nav-right > li > a.sidenav-expand-toggler {
-=======
 
   .header .header-container .nav-left>li>a.sidenav-fold-toggler,
   .header .header-container .nav-right>li>a.sidenav-fold-toggler {
@@ -1117,7 +965,6 @@ hr {
 
   .header .header-container .nav-left>li>a.sidenav-expand-toggler,
   .header .header-container .nav-right>li>a.sidenav-expand-toggler {
->>>>>>> refs/remotes/origin/main
     display: block;
   }
 }
@@ -1163,22 +1010,14 @@ hr {
   .side-nav-expand .header .header-container .nav-logo {
     width: 0px;
   }
-<<<<<<< HEAD
-  .side-nav-expand .header .header-container .nav-left > li > a.sidenav-expand-toggler i:before {
-=======
 
   .side-nav-expand .header .header-container .nav-left>li>a.sidenav-expand-toggler i:before {
->>>>>>> refs/remotes/origin/main
     content: "\e914";
   }
 }
 
-<<<<<<< HEAD
-.dropdown.dropdown-animated:not(.scale-left) .dropdown-menu, .dropdown.dropdown-animated:not(.scale-right) .dropdown-menu {
-=======
 .dropdown.dropdown-animated:not(.scale-left) .dropdown-menu,
 .dropdown.dropdown-animated:not(.scale-right) .dropdown-menu {
->>>>>>> refs/remotes/origin/main
   opacity: 0;
   visibility: hidden;
   -webkit-transform: translateY(15px) !important;
@@ -1195,12 +1034,8 @@ hr {
   top: auto !important;
 }
 
-<<<<<<< HEAD
-.dropdown.dropdown-animated:not(.scale-left) .dropdown-menu.show, .dropdown.dropdown-animated:not(.scale-right) .dropdown-menu.show {
-=======
 .dropdown.dropdown-animated:not(.scale-left) .dropdown-menu.show,
 .dropdown.dropdown-animated:not(.scale-right) .dropdown-menu.show {
->>>>>>> refs/remotes/origin/main
   opacity: 1;
   visibility: visible;
   -webkit-transform: translateY(0px) !important;
@@ -1300,12 +1135,8 @@ hr {
   color: #8a8a8a;
 }
 
-<<<<<<< HEAD
-.dropdown-item:hover, .dropdown-item:focus {
-=======
 .dropdown-item:hover,
 .dropdown-item:focus {
->>>>>>> refs/remotes/origin/main
   color: #515365;
   text-decoration: none;
   background-color: #f7f7f8;
@@ -1316,12 +1147,8 @@ hr {
   cursor: not-allowed;
 }
 
-<<<<<<< HEAD
-.dropdown-item.disabled:hover, .dropdown-item.disabled:focus {
-=======
 .dropdown-item.disabled:hover,
 .dropdown-item.disabled:focus {
->>>>>>> refs/remotes/origin/main
   background-color: transparent;
 }
 
@@ -1349,12 +1176,8 @@ hr {
   font-size: 15px;
 }
 
-<<<<<<< HEAD
-.dropdown, .dropup {
-=======
 .dropdown,
 .dropup {
->>>>>>> refs/remotes/origin/main
   display: inline-block;
 }
 
@@ -1362,21 +1185,12 @@ hr {
   margin-bottom: 0px;
 }
 
-<<<<<<< HEAD
-.table > tbody > tr > td,
-.table > tbody > tr > th,
-.table > tfoot > tr > td,
-.table > tfoot > tr > th,
-.table > thead > tr > td,
-.table > thead > tr > th {
-=======
 .table>tbody>tr>td,
 .table>tbody>tr>th,
 .table>tfoot>tr>td,
 .table>tfoot>tr>th,
 .table>thead>tr>td,
 .table>thead>tr>th {
->>>>>>> refs/remotes/origin/main
   line-height: 1.8;
   border-color: #e9eaec;
 }
@@ -1385,19 +1199,11 @@ hr {
   color: #fff;
 }
 
-<<<<<<< HEAD
-.table-sm > tbody > tr > td,
-.table-sm > tbody > tr > th,
-.table-sm > tfoot > tr > td,
-.table-sm > tfoot > tr > th,
-.table-sm > thead > tr > td.table-sm > thead > tr > th {
-=======
 .table-sm>tbody>tr>td,
 .table-sm>tbody>tr>th,
 .table-sm>tfoot>tr>td,
 .table-sm>tfoot>tr>th,
 .table-sm>thead>tr>td.table-sm>thead>tr>th {
->>>>>>> refs/remotes/origin/main
   padding: 7.5px;
 }
 
@@ -1405,31 +1211,6 @@ hr {
   background-color: #f7f7f7;
 }
 
-<<<<<<< HEAD
-.table-lg > tbody > tr > td,
-.table-lg > tbody > tr > th,
-.table-lg > tfoot > tr > td,
-.table-lg > tfoot > tr > th,
-.table-lg > thead > tr > td,
-.table-lg > thead > tr > th {
-  padding: 15px;
-}
-
-.table-xl > tbody > tr > td,
-.table-xl > tbody > tr > th,
-.table-xl > tfoot > tr > td,
-.table-xl > tfoot > tr > th,
-.table-xl > thead > tr > td,
-.table-xl > thead > tr > th {
-  padding: 20px;
-}
-
-.table-striped > tbody > tr:nth-of-type(odd) {
-  background-color: #fbfbfb;
-}
-
-.table-hover > tbody > tr:hover {
-=======
 .table-lg>tbody>tr>td,
 .table-lg>tbody>tr>th,
 .table-lg>tfoot>tr>td,
@@ -1453,7 +1234,6 @@ hr {
 }
 
 .table-hover>tbody>tr:hover {
->>>>>>> refs/remotes/origin/main
   background-color: #fafafa;
 }
 
@@ -1461,11 +1241,7 @@ hr {
   border: 1px solid #e9eaec;
 }
 
-<<<<<<< HEAD
-.table > thead > tr > th {
-=======
 .table>thead>tr>th {
->>>>>>> refs/remotes/origin/main
   color: #717171;
   border-bottom: 1px solid #e9eaec;
 }
@@ -1570,8 +1346,6 @@ hr {
   padding-top: 95px;
 }
 
-<<<<<<< HEAD
-=======
 .page-container .main-content .nav-logo .centered-content {
   display: flex;
   flex-direction: column;
@@ -1580,7 +1354,6 @@ hr {
   height: 1vh;
   /* 100% of the viewport height */
 }
->>>>>>> refs/remotes/origin/main
 /* Card group */
 .card-group {
   margin-bottom: 20px;
@@ -1682,12 +1455,8 @@ hr {
   display: inline-block;
 }
 
-<<<<<<< HEAD
-.card-toolbar ul li a, .card-toolbar ul li .btn {
-=======
 .card-toolbar ul li a,
 .card-toolbar ul li .btn {
->>>>>>> refs/remotes/origin/main
   margin-bottom: 0px;
   margin-right: 10px;
   display: block;
@@ -1812,12 +1581,8 @@ hr {
   position: relative;
 }
 
-<<<<<<< HEAD
-.list-media .list-item a:hover, .list-media .list-item a:focus {
-=======
 .list-media .list-item a:hover,
 .list-media .list-item a:focus {
->>>>>>> refs/remotes/origin/main
   text-decoration: none;
 }
 
@@ -1825,12 +1590,8 @@ hr {
   background-color: #fafafa;
 }
 
-<<<<<<< HEAD
-.list-media .list-item .media-hover:hover, .list-media .list-item .media-hover:focus {
-=======
 .list-media .list-item .media-hover:hover,
 .list-media .list-item .media-hover:focus {
->>>>>>> refs/remotes/origin/main
   text-decoration: none;
   background-color: #fafafa;
 }
@@ -1840,12 +1601,8 @@ hr {
   float: left;
 }
 
-<<<<<<< HEAD
-.list-media .media-img img, .list-media .media-img .icon-avatar {
-=======
 .list-media .media-img img,
 .list-media .media-img .icon-avatar {
->>>>>>> refs/remotes/origin/main
   line-height: 40px;
   height: 40px;
   width: 40px;
@@ -2070,12 +1827,8 @@ button:focus {
   outline: none !important;
 }
 
-<<<<<<< HEAD
-.icon-close, .icon-check {
-=======
 .icon-close,
 .icon-check {
->>>>>>> refs/remotes/origin/main
   color: #e22a6f;
 }
 
@@ -2122,12 +1875,8 @@ button:focus {
   border-color: #70c89a;
 }
 
-<<<<<<< HEAD
-.btn-inverse-success.disabled, .btn-inverse-success:disabled {
-=======
 .btn-inverse-success.disabled,
 .btn-inverse-success:disabled {
->>>>>>> refs/remotes/origin/main
   color: #70c89a;
   background-color: transparent;
 }
@@ -2148,12 +1897,8 @@ button:focus {
   border-color: #d8d8d8;
 }
 
-<<<<<<< HEAD
-.btn-inverse-secondary.disabled, .btn-inverse-secondary:disabled {
-=======
 .btn-inverse-secondary.disabled,
 .btn-inverse-secondary:disabled {
->>>>>>> refs/remotes/origin/main
   color: #d8d8d8;
   background-color: transparent;
 }
@@ -2180,12 +1925,8 @@ button:focus {
   border-color: #b87ef3;
 }
 
-<<<<<<< HEAD
-.btn-inverse-info.disabled, .btn-inverse-info:disabled {
-=======
 .btn-inverse-info.disabled,
 .btn-inverse-info:disabled {
->>>>>>> refs/remotes/origin/main
   color: #b87ef3;
   background-color: transparent;
 }
@@ -2206,12 +1947,8 @@ button:focus {
   border-color: #f1b863;
 }
 
-<<<<<<< HEAD
-.btn-inverse-warning.disabled, .btn-inverse-warning:disabled {
-=======
 .btn-inverse-warning.disabled,
 .btn-inverse-warning:disabled {
->>>>>>> refs/remotes/origin/main
   color: #f1b863;
   background-color: transparent;
 }
@@ -2232,13 +1969,6 @@ button:focus {
   border-color: #ee8a97;
 }
 
-<<<<<<< HEAD
-.btn-inverse-danger.focus, .btn-inverse-danger:focus {
-  box-shadow: 0 0 0 3px rgba(238, 138, 151, 0.5);
-}
-
-.btn-inverse-danger.disabled, .btn-inverse-danger:disabled {
-=======
 .btn-inverse-danger.focus,
 .btn-inverse-danger:focus {
   box-shadow: 0 0 0 3px rgba(238, 138, 151, 0.5);
@@ -2246,7 +1976,6 @@ button:focus {
 
 .btn-inverse-danger.disabled,
 .btn-inverse-danger:disabled {
->>>>>>> refs/remotes/origin/main
   color: #ee8a97;
   background-color: transparent;
 }
@@ -2267,12 +1996,8 @@ button:focus {
   border-color: #f8f9fa;
 }
 
-<<<<<<< HEAD
-.btn-inverse-light.disabled, .btn-inverse-light:disabled {
-=======
 .btn-inverse-light.disabled,
 .btn-inverse-light:disabled {
->>>>>>> refs/remotes/origin/main
   color: #f8f9fa;
   background-color: transparent;
 }
@@ -2293,13 +2018,6 @@ button:focus {
   border-color: #302e2e;
 }
 
-<<<<<<< HEAD
-.btn-inverse-dark.focus, .btn-inverse-dark:focus {
-  box-shadow: 0 0 0 3px rgba(48, 46, 46, 0.5);
-}
-
-.btn-inverse-dark.disabled, .btn-inverse-dark:disabled {
-=======
 .btn-inverse-dark.focus,
 .btn-inverse-dark:focus {
   box-shadow: 0 0 0 3px rgba(48, 46, 46, 0.5);
@@ -2307,7 +2025,6 @@ button:focus {
 
 .btn-inverse-dark.disabled,
 .btn-inverse-dark:disabled {
->>>>>>> refs/remotes/origin/main
   color: #302e2e;
   background-color: transparent;
 }
@@ -2505,15 +2222,10 @@ button:focus {
   background: #ffffff;
 }
 
-<<<<<<< HEAD
-.fc-toolbar .fc-state-active, .fc-toolbar .ui-state-active,
-.fc-toolbar button:focus, .fc-toolbar button:hover,
-=======
 .fc-toolbar .fc-state-active,
 .fc-toolbar .ui-state-active,
 .fc-toolbar button:focus,
 .fc-toolbar button:hover,
->>>>>>> refs/remotes/origin/main
 .fc-toolbar .ui-state-hover {
   z-index: 0;
 }
@@ -2609,19 +2321,11 @@ button:focus {
   border-bottom: 1px solid #e9eaec;
 }
 
-<<<<<<< HEAD
-.nav-tabs > li {
-  margin-bottom: -2px;
-}
-
-.nav-tabs > li > a {
-=======
 .nav-tabs>li {
   margin-bottom: -2px;
 }
 
 .nav-tabs>li>a {
->>>>>>> refs/remotes/origin/main
   margin-right: 0px;
   line-height: 2.5;
   border-radius: 0;
@@ -2638,53 +2342,33 @@ button:focus {
   -ms-transition: all 0.3s ease-in-out;
 }
 
-<<<<<<< HEAD
-.nav-tabs > li > a:hover {
-=======
 .nav-tabs>li>a:hover {
->>>>>>> refs/remotes/origin/main
   border-color: transparent;
   background-color: transparent;
   opacity: 1;
 }
 
-<<<<<<< HEAD
-.nav-tabs > li > a:focus {
-=======
 .nav-tabs>li>a:focus {
->>>>>>> refs/remotes/origin/main
   background-color: transparent;
   opacity: 1;
 }
 
-<<<<<<< HEAD
-.nav-tabs > li > a.active {
-=======
 .nav-tabs>li>a.active {
->>>>>>> refs/remotes/origin/main
   border: 0px;
   background-color: transparent;
   border-bottom: 2px solid #e22a6f;
   opacity: 1;
 }
 
-<<<<<<< HEAD
-.nav-tabs > li > a.active:hover, .nav-tabs > li > a.active:focus {
-=======
 .nav-tabs>li>a.active:hover,
 .nav-tabs>li>a.active:focus {
->>>>>>> refs/remotes/origin/main
   border: 0px;
   background-color: transparent;
   border-bottom: 2px solid #e22a6f;
   opacity: 1;
 }
 
-<<<<<<< HEAD
-.nav-tabs > li > a.active.nav-link {
-=======
 .nav-tabs>li>a.active.nav-link {
->>>>>>> refs/remotes/origin/main
   border-bottom: 2px solid #e22a6f;
   color: #515365;
   background-color: transparent;
@@ -2696,41 +2380,6 @@ button:focus {
   border-left: 0px;
 }
 
-<<<<<<< HEAD
-.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus, .nav-tabs .nav-link:active {
-  border-color: transparent;
-}
-
-.tab-success .nav-tabs > li > a.active {
-  border-bottom: 2px solid #24d5d8;
-}
-
-.tab-success .nav-tabs > li > a.active:hover, .tab-success .nav-tabs > li > a.active:focus {
-  border-bottom: 2px solid #24d5d8;
-}
-
-.tab-info .nav-tabs > li > a.active {
-  border-bottom: 2px solid #04a1f4;
-}
-
-.tab-info .nav-tabs > li > a.active:hover, .tab-info .nav-tabs > li > a.active:focus {
-  border-bottom: 2px solid #04a1f4;
-}
-
-.tab-warning .nav-tabs > li > a.active {
-  border-bottom: 2px solid #fecd2f;
-}
-
-.tab-warning .nav-tabs > li > a.active:hover, .tab-warning .nav-tabs > li > a.active:focus {
-  border-bottom: 2px solid #fecd2f;
-}
-
-.tab-danger .nav-tabs > li > a.active {
-  border-bottom: 2px solid #fd3259;
-}
-
-.tab-danger .nav-tabs > li > a.active:hover, .tab-danger .nav-tabs > li > a.active:focus {
-=======
 .nav-tabs .nav-link:hover,
 .nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:active {
@@ -2770,7 +2419,6 @@ button:focus {
 
 .tab-danger .nav-tabs>li>a.active:hover,
 .tab-danger .nav-tabs>li>a.active:focus {
->>>>>>> refs/remotes/origin/main
   border-bottom: 2px solid #fd3259;
 }
 
@@ -2782,11 +2430,7 @@ button:focus {
   justify-content: center !important;
 }
 
-<<<<<<< HEAD
-.center-tabs .nav-tabs > li {
-=======
 .center-tabs .nav-tabs>li {
->>>>>>> refs/remotes/origin/main
   float: none;
   display: inline-block;
 }
@@ -2795,30 +2439,18 @@ button:focus {
   width: 100%;
 }
 
-<<<<<<< HEAD
-.justified-tabs .nav-tabs > li {
-=======
 .justified-tabs .nav-tabs>li {
->>>>>>> refs/remotes/origin/main
   display: table-cell;
   width: 1%;
   text-align: center;
   float: none;
 }
 
-<<<<<<< HEAD
-.nav-pills > li + li {
-  margin-left: 5px;
-}
-
-.nav-pills > li > a {
-=======
 .nav-pills>li+li {
   margin-left: 5px;
 }
 
 .nav-pills>li>a {
->>>>>>> refs/remotes/origin/main
   border-radius: 3px;
   opacity: 0.75;
   font-size: 14px;
@@ -2829,21 +2461,13 @@ button:focus {
   padding: 5px 15px;
 }
 
-<<<<<<< HEAD
-.nav-pills > li > a:hover, .nav-pills > li > a:focus {
-=======
 .nav-pills>li>a:hover,
 .nav-pills>li>a:focus {
->>>>>>> refs/remotes/origin/main
   background-color: transparent;
   opacity: 1;
 }
 
-<<<<<<< HEAD
-.nav-pills > li > a.active {
-=======
 .nav-pills>li>a.active {
->>>>>>> refs/remotes/origin/main
   color: #ffffff;
   border-color: #e22a6f;
   background-color: #e22a6f;
@@ -2851,12 +2475,8 @@ button:focus {
   opacity: 1;
 }
 
-<<<<<<< HEAD
-.nav-pills > li > a.active:hover, .nav-pills > li > a.active:focus {
-=======
 .nav-pills>li>a.active:hover,
 .nav-pills>li>a.active:focus {
->>>>>>> refs/remotes/origin/main
   color: #ffffff;
   border-color: #e22a6f;
   background-color: #e22a6f;
@@ -2864,11 +2484,7 @@ button:focus {
   opacity: 1;
 }
 
-<<<<<<< HEAD
-.nav-pills > li > a.active.nav-link {
-=======
 .nav-pills>li>a.active.nav-link {
->>>>>>> refs/remotes/origin/main
   color: #ffffff;
   background-color: #e22a6f;
   border-color: #e22a6f;
@@ -2881,19 +2497,11 @@ button:focus {
   display: block;
 }
 
-<<<<<<< HEAD
-.nav-vertical .nav-pills > li {
-  margin-bottom: 15px;
-}
-
-.nav-vertical .nav-pills > li + li {
-=======
 .nav-vertical .nav-pills>li {
   margin-bottom: 15px;
 }
 
 .nav-vertical .nav-pills>li+li {
->>>>>>> refs/remotes/origin/main
   margin-left: 0px;
 }
 
@@ -2902,122 +2510,74 @@ button:focus {
   width: 70%;
 }
 
-<<<<<<< HEAD
-.pill-success .nav-pills > li > a.active {
-=======
 .pill-success .nav-pills>li>a.active {
->>>>>>> refs/remotes/origin/main
   border-color: #24d5d8;
   background-color: #24d5d8;
   border: 1px solid #24d5d8;
 }
 
-<<<<<<< HEAD
-.pill-success .nav-pills > li > a.active:hover, .pill-success .nav-pills > li > a.active:focus {
-=======
 .pill-success .nav-pills>li>a.active:hover,
 .pill-success .nav-pills>li>a.active:focus {
->>>>>>> refs/remotes/origin/main
   border-color: #24d5d8;
   background-color: #24d5d8;
   border: 1px solid #24d5d8;
 }
 
-<<<<<<< HEAD
-.pill-success .nav-pills > li > a.active.nav-link {
-=======
 .pill-success .nav-pills>li>a.active.nav-link {
->>>>>>> refs/remotes/origin/main
   color: #ffffff;
   border-color: #24d5d8;
 }
 
-<<<<<<< HEAD
-.pill-info .nav-pills > li > a.active {
-=======
 .pill-info .nav-pills>li>a.active {
->>>>>>> refs/remotes/origin/main
   border-color: #04a1f4;
   background-color: #04a1f4;
   border: 1px solid #04a1f4;
 }
 
-<<<<<<< HEAD
-.pill-info .nav-pills > li > a.active:hover, .pill-info .nav-pills > li > a.active:focus {
-=======
 .pill-info .nav-pills>li>a.active:hover,
 .pill-info .nav-pills>li>a.active:focus {
->>>>>>> refs/remotes/origin/main
   border-color: #04a1f4;
   background-color: #04a1f4;
   border: 1px solid #04a1f4;
 }
 
-<<<<<<< HEAD
-.pill-info .nav-pills > li > a.active.nav-link {
-=======
 .pill-info .nav-pills>li>a.active.nav-link {
->>>>>>> refs/remotes/origin/main
   color: #ffffff;
   border-color: #04a1f4;
 }
 
-<<<<<<< HEAD
-.pill-warning .nav-pills > li > a.active {
-=======
 .pill-warning .nav-pills>li>a.active {
->>>>>>> refs/remotes/origin/main
   border-color: #fecd2f;
   background-color: #fecd2f;
   border: 1px solid #fecd2f;
 }
 
-<<<<<<< HEAD
-.pill-warning .nav-pills > li > a.active:hover, .pill-warning .nav-pills > li > a.active:focus {
-=======
 .pill-warning .nav-pills>li>a.active:hover,
 .pill-warning .nav-pills>li>a.active:focus {
->>>>>>> refs/remotes/origin/main
   border-color: #fecd2f;
   background-color: #fecd2f;
   border: 1px solid #fecd2f;
 }
 
-<<<<<<< HEAD
-.pill-warning .nav-pills > li > a.active.nav-link {
-=======
 .pill-warning .nav-pills>li>a.active.nav-link {
->>>>>>> refs/remotes/origin/main
   color: #ffffff;
   border-color: #fecd2f;
 }
 
-<<<<<<< HEAD
-.pill-danger .nav-pills > li > a.active {
-=======
 .pill-danger .nav-pills>li>a.active {
->>>>>>> refs/remotes/origin/main
   border-color: #fd3259;
   background-color: #fd3259;
   border: 1px solid #fd3259;
 }
 
-<<<<<<< HEAD
-.pill-danger .nav-pills > li > a.active:hover, .pill-danger .nav-pills > li > a.active:focus {
-=======
 .pill-danger .nav-pills>li>a.active:hover,
 .pill-danger .nav-pills>li>a.active:focus {
->>>>>>> refs/remotes/origin/main
   border-color: #fd3259;
   background-color: #fd3259;
   border: 1px solid #fd3259;
 }
 
-<<<<<<< HEAD
-.pill-danger .nav-pills > li > a.active.nav-link {
-=======
 .pill-danger .nav-pills>li>a.active.nav-link {
->>>>>>> refs/remotes/origin/main
   color: #ffffff;
   border-color: #fd3259;
 }
@@ -3068,39 +2628,23 @@ button:focus {
   padding-top: 5px;
 }
 
-<<<<<<< HEAD
-.accordion.nested > .card {
-=======
 .accordion.nested>.card {
->>>>>>> refs/remotes/origin/main
   margin-bottom: 0px;
   border-bottom: 0px;
 }
 
-<<<<<<< HEAD
-.accordion.nested > .card:last-child {
-  border-bottom: 1px solid #e9eaec;
-}
-
-.accordion.borderless > .card {
-=======
 .accordion.nested>.card:last-child {
   border-bottom: 1px solid #e9eaec;
 }
 
 .accordion.borderless>.card {
->>>>>>> refs/remotes/origin/main
   margin-bottom: 0px;
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
 }
 
-<<<<<<< HEAD
-.accordion.borderless > .card:last-child {
-=======
 .accordion.borderless>.card:last-child {
->>>>>>> refs/remotes/origin/main
   border-bottom: 0px;
 }
 
@@ -3292,12 +2836,8 @@ button:focus {
   position: relative;
 }
 
-<<<<<<< HEAD
-.gmaps, .gmaps-panaroma {
-=======
 .gmaps,
 .gmaps-panaroma {
->>>>>>> refs/remotes/origin/main
   height: 300px;
   background: #fff;
 }
@@ -3307,15 +2847,11 @@ button:focus {
   background-color: #ffffff !important;
 }
 
-<<<<<<< HEAD
-.mce-container, .mce-container *, .mce-widget, .mce-widget *, .mce-reset {
-=======
 .mce-container,
 .mce-container *,
 .mce-widget,
 .mce-widget *,
 .mce-reset {
->>>>>>> refs/remotes/origin/main
   background: #ffffff;
 }
 
@@ -3324,19 +2860,11 @@ button:focus {
   margin-bottom: 0;
 }
 
-<<<<<<< HEAD
-.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
-  background-color: #e22a6f !important;
-}
-
-.custom-radio .custom-control-input:checked ~ .custom-control-label::before {
-=======
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
   background-color: #e22a6f !important;
 }
 
 .custom-radio .custom-control-input:checked~.custom-control-label::before {
->>>>>>> refs/remotes/origin/main
   background-color: #e22a6f !important;
 }
 
@@ -3393,10 +2921,6 @@ button:focus {
   .content-footer .footer {
     text-align: center;
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/main
   .content-footer .footer .go-right {
     float: none;
     margin-top: 15px;
@@ -3405,19 +2929,9 @@ button:focus {
 }
 
 /*Extra*/
-<<<<<<< HEAD
-.badge-pro{
-    margin: 10px;
-    background-color: #03A9F4 !important;
-    z-index: 999;
-    position: relative;
-  }
-
-=======
 .badge-pro {
   margin: 10px;
   background-color: #03A9F4 !important;
   z-index: 999;
   position: relative;
 }
->>>>>>> refs/remotes/origin/main

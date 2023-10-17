@@ -41,7 +41,7 @@
                   ><img
                     src="{{ url_for('static', filename='images/logo.png') }}"
                     alt="logo"
-                    style="width: 50px"
+                    style="width: 50px;mix-blend-mode: multiply;" 
                 /></b>
                 <span class="logo" style="color: green">
                   GREEN&nbsp;PLANT
@@ -294,15 +294,15 @@
                 </a>
               </li>
               <li class="nav-item dropdown {{ open2 }}">
-                <a class="dropdown-toggle" href="statistics">
+                <a class="dropdown-toggle" href="/statistics">
                   <span class="icon-holder">
                     <i class="lni-bar-chart"></i>
                   </span>
                   <span class="title">Statistics</span>
                 </a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="dropdown-toggle" href="email.html">
+              <li class="nav-item dropdown {{ open3 }}">
+                <a class="dropdown-toggle" href="/analysis">
                   <span class="icon-holder">
                     <i class="lni-book"></i>
                   </span>
@@ -310,7 +310,7 @@
                 </a>
               </li>
               <li class="nav-item dropdown">
-                <a class="dropdown-toggle" href="alert.html">
+                <a class="dropdown-toggle" href="/circuit">
                   <span class="icon-holder">
                     <i class="lni-vector"></i>
                   </span>
@@ -318,7 +318,7 @@
                 </a>
               </li>
               <li class="nav-item dropdown">
-                <a class="dropdown-toggle" href="badge.html">
+                <a class="dropdown-toggle" href="/history">
                   <span class="icon-holder">
                     <i class="lni-hourglass"></i>
                   </span>
@@ -326,7 +326,7 @@
                 </a>
               </li>
               <li class="nav-item dropdown">
-                <a class="dropdown-toggle" href="buttons.html">
+                <a class="dropdown-toggle" href="/alerts">
                   <span class="icon-holder">
                     <i class="lni-alarm"></i>
                   </span>
@@ -334,11 +334,7 @@
                 </a>
               </li>
               <li class="nav-item dropdown">
-<<<<<<< HEAD
-                <a class="dropdown-toggle" href="accordion.html">
-=======
                 <a class="dropdown-toggle" href="/about">
->>>>>>> refs/remotes/origin/main
                   <span class="icon-holder">
                     <i class="lni-timer"></i>
                   </span>
@@ -346,7 +342,7 @@
                 </a>
               </li>
               <li class="nav-item dropdown">
-                <a class="dropdown-toggle" href="carousel.html">
+                <a class="dropdown-toggle" href="/settings">
                   <span class="icon-holder">
                     <i class="lni-cog"></i>
                   </span>

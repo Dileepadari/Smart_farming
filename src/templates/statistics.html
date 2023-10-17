@@ -1,47 +1,72 @@
-<div class="main-content">
+<div class="main-content" loading="lazy">
+  <h1 style="text-align: center;">Analytic Graphs of the Sensors</h1>
+  <br><br>
   <div
     class="grid"
     style="
-      display: grid;
+      display: flex;
       column-gap: 100px;
-      justify-items: center;
       row-gap: 150px;
+      justify-content: space-around;
       flex-wrap: wrap;
+      margin-left: 2vw;
     "
   >
+  <div><h2 style="text-align: center;">Temeperature over last 1 hr</h2>
     <iframe
       width="450"
+      loading="lazy"
       height="260"
       style="border: 1px solid #cccccc"
-      src="https://thingspeak.com/channels/2281910/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=30&type=line"
-    ></iframe>
+      src="https://thingspeak.com/channels/2281910/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=30&type=line"></iframe>
+      </div>
 
+      <div><h2 style="text-align: center;">Soil Moisture over last 1 hr</h2>
     <iframe
       width="450"
+      loading="lazy"
       height="260"
       style="border: 1px solid #cccccc"
-      src="https://thingspeak.com/channels/2281910/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=30&type=line"
+      src="https://thingspeak.com/channels/2281910/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=30&type=line"
     ></iframe>
+    </div>
 
+    <div><h2 style="text-align: center;">Light Intensity over last 1 hr</h2>
     <iframe
       width="450"
+      loading="lazy"
       height="260"
       style="border: 1px solid #cccccc"
-      src="https://thingspeak.com/channels/2281910/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=30&type=line"
+      src="https://thingspeak.com/channels/2281910/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=30&type=line"
     ></iframe>
+    </div>
 
+    <div><h2 style="text-align: center;">Volatile Organic Compunds over last 1 hr</h2>
     <iframe
       width="450"
+      loading="lazy"
       height="260"
       style="border: 1px solid #cccccc"
-      src="https://thingspeak.com/channels/2281910/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=30&type=line"
+      src="https://thingspeak.com/channels/2281910/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=30&type=line"
     ></iframe>
+    </div>
 
+    <div><h2 style="text-align: center;">Carbondioxide over last 1 hr</h2>
     <iframe
       width="450"
       height="260"
       style="border: 1px solid #cccccc"
-      src="https://thingspeak.com/channels/2281910/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=30&type=line"
+      src="https://thingspeak.com/channels/2281910/charts/5?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=30&type=line"
     ></iframe>
+    </div>
+
+    <div><h2 style="text-align: center;">Humidity over last 1 hr</h2>
+    <iframe
+    width="450"
+    height="260"
+    style="border: 1px solid #cccccc"
+    src="https://thingspeak.com/channels/2281910/charts/6?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=30&type=line"
+  ></iframe>
+    </div>
   </div>
 </div>

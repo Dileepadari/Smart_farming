@@ -19,6 +19,14 @@ def home():
 @app.route('/statistics', methods=['GET','POST'])
 def statistics():
     return render_template('index.html', file = "statistics.html", open2="open")
+<<<<<<< HEAD
+=======
+    
+    
+@app.route('/about', methods=['GET','POST'])
+def about():
+    return render_template('index.html', file = "about.html", open3="open")
+>>>>>>> refs/remotes/origin/main
 
 # @app.route('/statitics', methods=['GET','POST'])
 # def statistics():
@@ -42,4 +50,8 @@ def statistics():
 
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     app.run(debug=True)
+=======
+    app.run(debug=True)
+>>>>>>> refs/remotes/origin/main

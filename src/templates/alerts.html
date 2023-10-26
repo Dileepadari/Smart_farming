@@ -1,0 +1,70 @@
+<style>
+    .container {
+        position: relative;
+        padding: 16px;
+        margin-bottom: 16px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #f6f6f6;
+    }
+    .close {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+        color: #aaa;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .alert-success {
+        border-color: #4CAF50;
+        background-color: #dff0d8;
+        color: #4CAF50;
+    }
+    .alert-info {
+        border-color: #2196F3;
+        background-color: #d9edf7;
+        color: #2196F3;
+    }
+    .alert-warning {
+        border-color: #f0ad4e;
+        background-color: #fcf8e3;
+        color: #f0ad4e;
+    }
+    .alert-danger {
+        border-color: #d9534f;
+        background-color: #f2dede;
+        color: #d9534f;
+    }
+    .footer{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #f6f6f6;
+        color: black;
+        text-align: center;
+    }
+</style>
+
+
+<h1 style="text-align: center;padding-top: 80px;">Notifications</h1>
+    {% for i in notification %}
+    <div class="container alert-{{ i[3]}}">
+        <a class="close" href="/change_seen">&times;</a>
+        <strong>For {{ i[1] }} : </strong> {{ i[2] }}.
+        <div class="grey-text" style="text-align: right;">{{ i[4] }}</div>
+    </div>
+    {% endfor %}
+    
+    <script>
+        // Close the alert when the close button is clicked
+        var close = document.getElementsByClassName("close");
+        var i;
+
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function () {
+                var div = this.parentElement;
+                div.style.display = "none";
+            }
+        }
+    </script>

@@ -29,7 +29,7 @@
                   <p class="text-muted">Humidity</p>
                 </div>
                 <div class="ml-auto">
-                  <h2 class="counter text-primary">
+                  <h2 class="counter text-success">
                     {{ data['feeds'][1]['field6'] }}
                   </h2>
                 </div>
@@ -37,14 +37,9 @@
             </div>
             <div class="col-12">
               <div class="progress">
-                <div
-                  class="progress-bar bg-primary"
-                  role="progressbar"
-                  style="width: {{ data['feeds'][1]['field6'] }}%; height: 6px"
-                  aria-valuenow="25"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
+                <div class="progress-bar bg-success" role="progressbar"
+                  style="width: {{ data['feeds'][1]['field6'] }}%; height: 6px" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
               </div>
             </div>
           </div>
@@ -62,7 +57,7 @@
                   <p class="text-muted">Temperature</p>
                 </div>
                 <div class="ml-auto">
-                  <h2 class="counter text-success">
+                  <h2 class="counter text-primary">
                     {{ data['feeds'][1]['field1'] }}
                   </h2>
                 </div>
@@ -70,14 +65,9 @@
             </div>
             <div class="col-12">
               <div class="progress">
-                <div
-                  class="progress-bar bg-success"
-                  role="progressbar"
-                  style="width: {{ data['feeds'][1]['field1'] }}%; height: 6px"
-                  aria-valuenow="25"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
+                <div class="progress-bar bg-primary" role="progressbar"
+                  style="width: {{ data['feeds'][1]['field1'] }}%; height: 6px" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
               </div>
             </div>
           </div>
@@ -95,7 +85,7 @@
                   <p class="text-muted">Light Intensity</p>
                 </div>
                 <div class="ml-auto">
-                  <h2 class="counter text-info">
+                  <h2 class="counter" style="color: rgb(255, 123, 0);">
                     {{ data['feeds'][1]['field3'] }}
                   </h2>
                 </div>
@@ -103,14 +93,9 @@
             </div>
             <div class="col-12">
               <div class="progress">
-                <div
-                  class="progress-bar bg-info"
-                  role="progressbar"
-                  style="width: {{ data['feeds'][1]['field3'] }}%; height: 6px"
-                  aria-valuenow="25"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
+                <div class="progress-bar" role="progressbar"
+                  style="width: {{ data['feeds'][1]['field3'] }}%;background-color: rgb(255, 123, 0); height: 6px" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
               </div>
             </div>
           </div>
@@ -126,7 +111,7 @@
                   <p class="text-muted">Soil Moisture</p>
                 </div>
                 <div class="ml-auto">
-                  <h2 class="counter text-purple">
+                  <h2 class="counter" style="color: brown;">
                     {{ data['feeds'][1]['field2'] }}
                   </h2>
                 </div>
@@ -134,14 +119,9 @@
             </div>
             <div class="col-12">
               <div class="progress">
-                <div
-                  class="progress-bar bg-purple"
-                  role="progressbar"
-                  style="width: {{ data['feeds'][1]['field2'] }}%; height: 6px"
-                  aria-valuenow="25"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
+                <div class="progress-bar" role="progressbar"
+                  style="width: {{ data['feeds'][1]['field2'] }}%; background-color: brown; height: 6px" aria-valuenow="25" aria-valuemin="0"
+                  aria-valuemax="100"></div>
               </div>
             </div>
           </div>
@@ -157,18 +137,15 @@
               <div class="sales-info">
                 <h3>{{ data['feeds'][1]['field5'] }}</h3>
                 <span>
-                  <i class="lni-alarm-clock"></i>&nbsp;Carbondioxide
+                  <i class="lni-alarm-clock"></i>&nbsp;Carbondioxide (in ppm)
                 </span>
               </div>
               <div class="progress progress-sm">
-                <div
-                  class="progress-bar bg-purple"
-                  role="progressbar"
-                  aria-valuenow="{{ data['feeds'][1]['field5'] }}"
-                  style="width: {{ data['feeds'][1]['field5'] }}%"
-                ></div>
+                {% set perc = data['feeds'][1]['field5']|int %}
+                <div class="progress-bar bg-purple" role="progressbar" aria-valuenow="{{ data['feeds'][1]['field5'] }}"
+                  style="width: {{ perc/10 }}%"></div>
               </div>
-              <p>{{ data['feeds'][1]['field5'] }}% higher than the average</p>
+              <p>{{ perc - perc}} higher than the average</p>
             </div>
           </div>
         </div>
@@ -178,7 +155,7 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header border-bottom">
-            <h4 class="card-title">Volatile Organic Compund</h4>
+            <h4 class="card-title">Volatile Organic Compund &nbsp (in ppb)</h4>
             &nbsp;
             <span>(for last 10 minutes)</span>
           </div>

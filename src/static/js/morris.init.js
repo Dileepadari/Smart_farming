@@ -152,30 +152,42 @@ File: morris init js
         barColors: lineColors,
       })
     }),
-    (MorrisCharts.prototype.init = function () {
-      //create line chart
-      var $data = [
-        { y: '0230', a: 10 },
-        { y: '0232', a: 75 },
-        { y: '0233', a: 50 },
-        { y: '0234', a: 75 },
-        { y: '0235', a: 50 },
-        { y: '0236', a: 75 },
-        { y: '0237', a: 60 },
-        { y: '0238', a: 45 },
-        { y: '0239', a: 75 },
-        { y: '0240', a: 80 },
-      ]
-      this.createLineChart(
-        'morris-line-example',
-        $data,
-        ['y'],
-        ['a'],
-        ['Sales'],
-        ['#110077']
-      )
+    (MorrisCharts.prototype.init = async function () {
+      var $lineData = [
+        { y: '2018-01-01', a: 10 },
+        { y: '2018-01-02', a: 20 },
+        { y: '2018-01-03', a: 30 },
+        { y: '2018-01-04', a: 40 },
+        { y: '2018-01-05', a: 50 },
+        { y: '2018-01-06', a: 60 },
+        { y: '2018-01-07', a: 70 },
+        { y: '2018-01-08', a: 80 },
+        { y: '2018-01-09', a: 90 },
+        { y: '2018-01-10', a: 100 }
+      ];
+      $.ajax({
+        url: 'https://api.thingspeak.com/channels/2281910/fields/4.json?results=10',
+        type: 'GET',
+        dataType: 'json',
+        success: function(data) {
+          $lineData = data.feeds.map(function(feed) {
+            return { y: feed.created_at, a: parseInt(feed.field4) };
+          });
+            console.log($lineData);
+            MorrisCharts.prototype.createLineChart(
+              'morris-line-example',
+              $lineData,
+              'y',
+              ['a'],
+              ['Data'],
+              ['green']
+              );
+            },
+            error: function(xhr, status, error) {
+              console.error(error);
+            }
+          });
 
-      //creating area chart
       var $areaData = [
         { y: '2018', a: 10, b: 20 },
         { y: '2019', a: 75, b: 65 },

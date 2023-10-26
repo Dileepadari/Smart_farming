@@ -67,84 +67,11 @@
                 />
                 <i class="lni-search"></i>
               </li>
-              <li class="massages dropdown dropdown-animated scale-left">
-                <span
-                  class="counter"
-                  style="padding: 5px; margin-top: 5px; margin-left: -4px"
-                ></span>
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <i class="lni-envelope"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-lg">
-                  <li>
-                    <div class="dropdown-item align-self-center">
-                      <h5>Messages</h5>
-                    </div>
-                  </li>
-                  <li>
-                    <ul class="list-media">
-                      <li class="list-item">
-                        <a href="#" class="media-hover">
-                          <div class="media-img">
-                            <img
-                              src="{{ url_for('static', filename='images/logo.png') }}"
-                              alt=""
-                            />
-                          </div>
-                          <div class="info">
-                            <span class="title"> Amanda Robertson </span>
-                            <span class="sub-title"
-                              >Dummy text of the printing and typesetting
-                              industry.</span
-                            >
-                          </div>
-                        </a>
-                      </li>
-                      <li class="list-item">
-                        <a href="#" class="media-hover">
-                          <div class="media-img">
-                            <img
-                              src="{{ url_for('static', filename='images/prof.png') }}"
-                              alt=""
-                            />
-                          </div>
-                          <div class="info">
-                            <span class="title"> Danny Donovan </span>
-                            <span class="sub-title"
-                              >It is a long established fact that a reader
-                              will</span
-                            >
-                          </div>
-                        </a>
-                      </li>
-                      <li class="list-item">
-                        <a href="#" class="media-hover">
-                          <div class="media-img">
-                            <img
-                              src="{{ url_for('static', filename='images/logo.png') }}"
-                              alt=""
-                            />
-                          </div>
-                          <div class="info">
-                            <span class="title"> Frank Handrics </span>
-                            <span class="sub-title"
-                              >You have 87 unread messages</span
-                            >
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="check-all text-center">
-                    <span>
-                      <a href="#" class="text-gray">View All</a>
-                    </span>
-                  </li>
-                </ul>
-              </li>
               <li class="notifications dropdown dropdown-animated scale-left">
-                <span class="counter">2</span>
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                {% if notifications[0] %}
+                <span class="counter" style="padding: 5px;margin: 8px 0 10px 0;"></span>
+                {% endif %}
+                <a class="dropdown-toggle" data-toggle="dropdown">
                   <i class="lni-alarm"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-lg">
@@ -157,72 +84,47 @@
                   <li>
                     <ul class="list-media">
                       <li class="list-item">
-                        <a href="#" class="media-hover">
+                        {% for  i in notifications %}
+                        {% if i != notifications[-1] %}
+                        <a href="/alerts" class="media-hover">
                           <div class="media-img">
                             <div class="icon-avatar bg-primary">
                               <i class="lni-envelope"></i>
                             </div>
                           </div>
                           <div class="info">
-                            <span class="title"> 5 new messages </span>
-                            <span class="sub-title">4 min ago</span>
+                            <span class="title">{{ i[2] }}</span>
+                            <span class="sub-title">{{ notifications[-1][loop.index-1] }} ago</span>
                           </div>
                         </a>
                       </li>
+                      {% endif %}
+                      {% endfor %}
+                      {% if notifications == [[]] %}
                       <li class="list-item">
-                        <a href="#" class="media-hover">
-                          <div class="media-img">
-                            <div class="icon-avatar bg-success">
-                              <i class="lni-comments-alt"></i>
-                            </div>
-                          </div>
-                          <div class="info">
-                            <span class="title"> 4 new comments </span>
-                            <span class="sub-title">12 min ago</span>
-                          </div>
-                        </a>
+                        <div class="info">
+                          <span class="sub-title" style="margin-left: 40px;">No Notifications</span>
+                        </div>
+                        
                       </li>
-                      <li class="list-item">
-                        <a href="#" class="media-hover">
-                          <div class="media-img">
-                            <div class="icon-avatar bg-info">
-                              <i class="lni-users"></i>
-                            </div>
-                          </div>
-                          <div class="info">
-                            <span class="title"> 3 Friend Requests </span>
-                            <span class="sub-title">a day ago</span>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="list-item">
-                        <a href="#" class="media-hover">
-                          <div class="media-img">
-                            <div class="icon-avatar bg-purple">
-                              <i class="lni-comments-alt"></i>
-                            </div>
-                          </div>
-                          <div class="info">
-                            <span class="title"> 2 new messages </span>
-                            <span class="sub-title">12 min ago</span>
-                          </div>
-                        </a>
-                      </li>
+                      {% endif %}
                     </ul>
                   </li>
+                  {% if notifications != [[]] %}
                   <li class="check-all text-center">
                     <span>
-                      <a href="#" class="text-gray">Check all notifications</a>
+                      <a href="/alerts" class="text-gray">Check all notifications</a>
                     </span>
                   </li>
+                  {% endif %}
                 </ul>
               </li>
               <li class="user-profile dropdown dropdown-animated scale-left">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <a href="/" class="dropdown-toggle" data-toggle="dropdown">
                   <img
                     class="profile-img img-fluid"
                     src="{{ url_for('static', filename='images/prof.png') }}"
-                    alt=""
+                    alt="profile-img"
                   />
                 </a>
                 <ul class="dropdown-menu dropdown-md">
@@ -232,7 +134,7 @@
                         <div class="media-img">
                           <img
                             src="{{ url_for('static', filename='images/prof.png') }}"
-                            alt=""
+                            alt="profile-img"
                           />
                         </div>
                         <div class="info">
@@ -244,29 +146,13 @@
                   </li>
                   <li role="separator" class="divider"></li>
                   <li>
-                    <a href="">
+                    <a href="/settings">
                       <i class="lni-cog"></i>
                       <span>Setting</span>
                     </a>
                   </li>
                   <li>
-                    <a href="">
-                      <i class="lni-user"></i>
-                      <span>Profile</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      <i class="lni-envelope"></i>
-                      <span>Inbox</span>
-                      <span
-                        class="badge badge-pill badge-primary badge-pro pull-right"
-                        >2</span
-                      >
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
+                    <a href="/logout">
                       <i class="lni-lock"></i>
                       <span>Logout</span>
                     </a>
@@ -309,7 +195,7 @@
                   <span class="title">Analysis</span>
                 </a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown {{ open4 }}">
                 <a class="dropdown-toggle" href="/circuit">
                   <span class="icon-holder">
                     <i class="lni-vector"></i>
@@ -317,7 +203,7 @@
                   <span class="title">Circuit</span>
                 </a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown {{ open5 }}">
                 <a class="dropdown-toggle" href="/history">
                   <span class="icon-holder">
                     <i class="lni-hourglass"></i>
@@ -325,7 +211,7 @@
                   <span class="title">History</span>
                 </a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown {{ open6 }}">
                 <a class="dropdown-toggle" href="/alerts">
                   <span class="icon-holder">
                     <i class="lni-alarm"></i>
@@ -333,7 +219,7 @@
                   <span class="title">Alerts</span>
                 </a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown {{ open7 }}">
                 <a class="dropdown-toggle" href="/about">
                   <span class="icon-holder">
                     <i class="lni-timer"></i>
@@ -341,7 +227,7 @@
                   <span class="title">About</span>
                 </a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown {{ open8 }}">
                 <a class="dropdown-toggle" href="/settings">
                   <span class="icon-holder">
                     <i class="lni-cog"></i>
@@ -367,8 +253,8 @@
                   All Right Reserved
                 </span>
                 <span class="go-right">
-                  <a href="" class="text-gray">Term &amp; Conditions</a>
-                  <a href="" class="text-gray">Privacy &amp; Policy</a>
+                  <a href="/about" class="text-gray" style="padding: 0 20px 0 0;">Term &amp; Conditions</a>
+                  <a href="/about" class="text-gray" style="padding: 0 20px 0 0;">Privacy &amp; Policy</a>
                 </span>
               </div>
             </div>
@@ -399,6 +285,5 @@
 
   <script src="{{ url_for('static', filename='elements/morris/morris.min.js') }}"></script>
   <script src="{{ url_for('static', filename='elements/morris/raphael-min.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/dashborad1.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/morris.init.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/dashborad1.js') }}"></script>\
 </html>

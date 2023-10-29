@@ -1,72 +1,59 @@
 <div class="main-content" loading="lazy">
+  <div class="breadcrumb-wrapper row">
+    <div class="col-12 col-lg-3 col-md-6">
+      <h4 class="page-title">Statistics</h4>
+    </div>
+    <div class="col-12 col-lg-9 col-md-6">
+      <ol class="breadcrumb float-right">
+        <li><a href="/home">Home</a></li>
+        <li class="active">/ statistics</li>
+      </ol>
+    </div>
+  </div>
   <h1 style="text-align: center;">Analytic Graphs of the Sensors</h1>
   <br><br>
-  <div
-    class="grid"
-    style="
+  <div class="grid" style="
       display: flex;
       column-gap: 100px;
       row-gap: 150px;
       justify-content: space-around;
       flex-wrap: wrap;
       margin-left: 2vw;
-    "
-  >
-  <div><h2 style="text-align: center;">Temeperature over last 1 hr</h2>
-    <iframe
-      width="450"
-      loading="lazy"
-      height="260"
-      style="border: 1px solid #cccccc"
-      src="https://thingspeak.com/channels/2281910/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=30&type=line"></iframe>
-      </div>
-
-      <div><h2 style="text-align: center;">Soil Moisture over last 1 hr</h2>
-    <iframe
-      width="450"
-      loading="lazy"
-      height="260"
-      style="border: 1px solid #cccccc"
-      src="https://thingspeak.com/channels/2281910/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=30&type=line"
-    ></iframe>
+    ">
+    <div>
+      <h2 style="text-align: center;">Last {{ user[7] }} values for Temeperature</h2>
+      <iframe width="450" loading="lazy" height="260" style="border: 1px solid #cccccc"
+        src="https://thingspeak.com/channels/2281910/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results={{user[7]}}&type=line"></iframe>
     </div>
 
-    <div><h2 style="text-align: center;">Light Intensity over last 1 hr</h2>
-    <iframe
-      width="450"
-      loading="lazy"
-      height="260"
-      style="border: 1px solid #cccccc"
-      src="https://thingspeak.com/channels/2281910/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=30&type=line"
-    ></iframe>
+    <div>
+      <h2 style="text-align: center;">Last {{ user[7] }} values for Soil Moisture</h2>
+      <iframe width="450" loading="lazy" height="260" style="border: 1px solid #cccccc"
+        src="https://thingspeak.com/channels/2281910/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results={{user[7]}}&type=line"></iframe>
     </div>
 
-    <div><h2 style="text-align: center;">Volatile Organic Compunds over last 1 hr</h2>
-    <iframe
-      width="450"
-      loading="lazy"
-      height="260"
-      style="border: 1px solid #cccccc"
-      src="https://thingspeak.com/channels/2281910/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=30&type=line"
-    ></iframe>
+    <div>
+      <h2 style="text-align: center;">Last {{ user[7] }} values for Light Intensity</h2>
+      <iframe width="450" loading="lazy" height="260" style="border: 1px solid #cccccc"
+        src="https://thingspeak.com/channels/2281910/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results={{user[7]}}&type=line"></iframe>
     </div>
 
-    <div><h2 style="text-align: center;">Carbondioxide over last 1 hr</h2>
-    <iframe
-      width="450"
-      height="260"
-      style="border: 1px solid #cccccc"
-      src="https://thingspeak.com/channels/2281910/charts/5?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=30&type=line"
-    ></iframe>
+    <div>
+      <h2 style="text-align: center;">Last {{ user[7] }} values for VOC</h2>
+      <iframe width="450" loading="lazy" height="260" style="border: 1px solid #cccccc"
+        src="https://thingspeak.com/channels/2281910/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results={{user[7]}}&type=line"></iframe>
     </div>
 
-    <div><h2 style="text-align: center;">Humidity over last 1 hr</h2>
-    <iframe
-    width="450"
-    height="260"
-    style="border: 1px solid #cccccc"
-    src="https://thingspeak.com/channels/2281910/charts/6?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=30&type=line"
-  ></iframe>
+    <div>
+      <h2 style="text-align: center;">Last {{ user[7] }} values for Carbondioxide</h2>
+      <iframe width="450" height="260" style="border: 1px solid #cccccc"
+        src="https://thingspeak.com/channels/2281910/charts/5?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results={{user[7]}}&type=line"></iframe>
+    </div>
+
+    <div>
+      <h2 style="text-align: center;">Last {{ user[7] }} values for Humidity</h2>
+      <iframe width="450" height="260" style="border: 1px solid #cccccc"
+        src="https://thingspeak.com/channels/2281910/charts/6?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results={{user[7]}}&type=line"></iframe>
     </div>
   </div>
 </div>

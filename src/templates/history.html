@@ -1,0 +1,179 @@
+<style>
+    h1 {
+        text-align: center;
+        color: #4CAF50;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    label {
+        margin-right: 10px;
+        font-weight: bold;
+        color: #4CAF50;
+    }
+
+    input[type="date"] {
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+        margin-right: 10px;
+    }
+
+    button[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    #scroller {
+        max-height: 100vh;
+        overflow: auto;
+    }
+
+    table {
+        border: solid white 2px;
+        border-collapse: collapse;
+        width: 90%;
+        margin: 50px auto 0 auto;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+        font-weight: bold;
+        text-align: left;
+        padding: 10px;
+        position: sticky;
+        top: 0;
+    }
+
+    td {
+        border: 1px solid #ddd;
+        padding: 10px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #f6f6f6;
+        color: black;
+        text-align: center;
+    }
+</style>
+<div class="breadcrumb-wrapper row" style="padding: 80px 20px 0 20px;">
+    <div class="col-12 col-lg-3 col-md-6">
+        <h4 class="page-title">History</h4>
+    </div>
+    <div class="col-12 col-lg-9 col-md-6">
+        <ol class="breadcrumb float-right">
+            <li><a href="/home">Home</a></li>
+            <li class="active">/ History</li>
+        </ol>
+    </div>
+</div>
+<h1>History data of the Plant</h1>
+<form>
+    <label for="fromDate">From:</label>
+    <input type="date" id="fromDate" name="fromDate">
+    <label for="toDate">To:</label>
+    <input type="date" id="toDate" name="toDate">
+    <button type="submit">Submit</button>
+</form>
+<br>
+<div id="scroller">
+    <table id="historyTable">
+        <thead id="head_tab">
+            <tr>
+                <th>Date-Time</th>
+                <th>Temperature</th>
+                <th>Humidity</th>
+                <th>VOC</th>
+                <th>CO2</th>
+                <th>Soil moisture</th>
+                <th>Light intensity</th>
+            </tr>
+        </thead>
+        <tbody id="body_tab">
+        </tbody>
+    </table>
+</div>
+
+<script>
+    today = document.getElementById("toDate").valueAsDate = new Date();
+    yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 15);
+    document.getElementById("fromDate").valueAsDate = yesterday;
+</script>
+<script>
+    const channelId = 2281910;
+    const apiKey = "1M6NTVUZOV87FRI0";
+
+    const form = document.querySelector('form');
+    const fromDateInput = form.querySelector('#fromDate');
+    const toDateInput = form.querySelector('#toDate');
+    const tableBody = document.querySelector('#historyTable tbody');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const fromDate = fromDateInput.value;
+        const toDate = toDateInput.value;
+
+
+        const url = `https://api.thingspeak.com/channels/${channelId}/feeds.json?api_key=${apiKey}&start=${fromDate}&end=${toDate}`;
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                tableBody.innerHTML = '';
+                data.feeds.forEach(feed => {
+                    const row = document.createElement('tr');
+                    const dateCell = document.createElement('td');
+                    dateCell.textContent = feed.created_at;
+                    row.appendChild(dateCell);
+
+                    const field1Cell = document.createElement('td');
+                    field1Cell.textContent = feed.field1;
+                    row.appendChild(field1Cell);
+
+                    const field2Cell = document.createElement('td');
+                    field2Cell.textContent = feed.field6;
+                    row.appendChild(field2Cell);
+
+                    const field3Cell = document.createElement('td');
+                    field3Cell.textContent = feed.field4;
+                    row.appendChild(field3Cell);
+
+                    const field4Cell = document.createElement('td');
+                    field4Cell.textContent = feed.field5;
+                    row.appendChild(field4Cell);
+
+                    const field5Cell = document.createElement('td');
+                    field5Cell.textContent = feed.field2;
+                    row.appendChild(field5Cell);
+
+                    const field6Cell = document.createElement('td');
+                    field6Cell.textContent = feed.field3;
+                    row.appendChild(field6Cell);
+
+                    tableBody.appendChild(row);
+                });
+            })
+            .catch(error => console.error(error));
+    });
+
+</script>

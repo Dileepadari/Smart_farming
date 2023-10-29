@@ -1,99 +1,151 @@
 <style>
-     body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-    .sensor{
-        background-color: #ffffff;
-        border: 1px solid #ddd;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        padding: 60px;
+    .analysis-block {
         margin: 20px;
-        margin-top: 70px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th,
+    td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .exceeded {
+        background-color: #ffcccc;
+        color: #ff0000;
+        font-weight: bold;
+    }
+
+    .ok {
+        background-color: #ccffcc;
+        color: #008000;
+        font-weight: bold;
+    }
+
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #f2f2f2;
+        color: black;
+        text-align: center;
     }
 </style>
-
-
-<div style="padding-top: 100px;font-size: x-large;text-align: center;">Smart Farming Analysis Dashboard</div>
-<br>
-<div class="sensor-data" style="display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; ">
-    <div class="sensor">
-        <h2>Soil Moisture</h2>
-        <p>Current Value: <span id="soil-moisture-value">-</span></p>
-        <p>Threshold: <span id="soil-moisture-threshold">-</span></p>
-        <p>Optimal Value: <span id="soil-moisture-optimal">-</span></p>
+<div class="breadcrumb-wrapper row" style="padding: 80px 20px 0 20px;">
+    <div class="col-12 col-lg-3 col-md-6">
+        <h4 class="page-title">Analysis</h4>
     </div>
-
-
-    <div class="sensor">
-        <h2>Light Intensity</h2>
-        <p>Current Value: <span id="light-intensity-value">-</span></p>
-        <p>Threshold: <span id="light-intensity-threshold">-</span></p>
-        <p>Optimal Value: <span id="light-intensity-optimal">-</span></p>
-    </div>
-
-
-    <div class="sensor">
-        <h2>Temperature</h2>
-        <p>Current Value: <span id="temperature-value">-</span></p>
-        <p>Threshold: <span id="temperature-threshold">-</span></p>
-        <p>Optimal Value: <span id="temperature-optimal">-</span></p>
-    </div>
-
-    
-    <div class="sensor">
-        <h2>Humidity</h2>
-        <p>Current Value: <span id="humidity-value">-</span></p>
-        <p>Threshold: <span id="humidity-threshold">-</span></p>
-        <p>Optimal Value: <span id="humidity-optimal">-</span></p>
-    </div>
-
-
-    <div class="sensor">
-        <h2>Volatile Organic Compounds</h2>
-        <p>Current Value: <span id="sgp30-value">-</span></p>
-        <p>Threshold: <span id="sgp30-threshold">-</span></p>
-        <p>Optimal Value: <span id="sgp30-optimal">-</span></p>
-    </div>
-
-    <div class="sensor">
-        <h2>Carbondioxide</h2>
-        <p>Current Value: <span id="sgp30-v-value">-</span></p>
-        <p>Threshold: <span id="sgp30-v-threshold">-</span></p>
-        <p>Optimal Value: <span id="sgp30-v-optimal">-</span></p>
+    <div class="col-12 col-lg-9 col-md-6">
+        <ol class="breadcrumb float-right">
+            <li><a href="/home">Home</a></li>
+            <li class="active">/ Analysis</li>
+        </ol>
     </div>
 </div>
-<br><br></br>
-<script>
-    // Replace the following lines with your actual sensor data and thresholds
-    document.getElementById("soil-moisture-value").textContent = "{{ data['feeds'][1]['field2'] }}%";
-    document.getElementById("soil-moisture-threshold").textContent = "30%";
-    document.getElementById("soil-moisture-optimal").textContent = "60%";
-
-    document.getElementById("light-intensity-value").textContent = "{{ data['feeds'][1]['field3'] }} Lux";
-    document.getElementById("light-intensity-threshold").textContent = "500 Lux";
-    document.getElementById("light-intensity-optimal").textContent = "1000 Lux";
-
-    document.getElementById("temperature-value").textContent = "{{ data['feeds'][1]['field1'] }}°C";
-    document.getElementById("temperature-threshold").textContent = "20°C";
-    document.getElementById("temperature-optimal").textContent = "30°C";
-
-    document.getElementById("humidity-value").textContent = "{{ data['feeds'][1]['field6'] }}%";
-    document.getElementById("humidity-threshold").textContent = "40%";
-    document.getElementById("humidity-optimal").textContent = "60%";
-
-    document.getElementById("sgp30-value").textContent = "{{ data['feeds'][1]['field4'] }} ppm";
-    document.getElementById("sgp30-threshold").textContent = "350 ppm";
-    document.getElementById("sgp30-optimal").textContent = "500 ppm";
-
-    document.getElementById("sgp30-v-value").textContent = "{{ data['feeds'][1]['field5'] }} ppm";
-    document.getElementById("sgp30-v-threshold").textContent = "350 ppm";
-    document.getElementById("sgp30-v-optimal").textContent = "500 ppm";
-</script>
+<h2 style="text-align: center;">Threshold Analysis for {{ thresholds[0][1] }} plant</h2>
+<div class="analysis-block">
+    <table>
+        <thead>
+            <tr>
+                <th>Sensor Name</th>
+                <th>Threshold Value</th>
+                <th>Current Value</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Temperature</td>
+                <td>{{ thresholds[0][4] }}°C - {{ thresholds[0][5] }}°C</td>
+                <td>{{ data['feeds'][0]['field1'] }}°C</td>
+                {% if data['feeds'][0]['field1']|int > thresholds[0][4]|int and data['feeds'][0]['field1']|int <
+                    thresholds[0][5]|int %} <td class="ok">OK</td>
+                    {%else%}
+                    <td class="exceeded">Danger state</td>
+                    {% endif %}
+            </tr>
+            <tr>
+                <td>Humidity</td>
+                <td>{{ thresholds[0][6] }}% - {{ thresholds[0][7] }}%</td>
+                <td>{{ data['feeds'][0]['field6'] }}%</td>
+                {% if data['feeds'][0]['field6']|int > thresholds[0][6]|int and data['feeds'][0]['field6']|int <
+                    thresholds[0][7]|int %} <td class="ok">OK</td>
+                    {%else%}
+                    <td class="exceeded">Danger state</td>
+                    {% endif %}
+            </tr>
+            <tr>
+                <td>Light Intensity</td>
+                <td>{{ thresholds[0][4] }} lux - {{ thresholds[0][5] }} lux</td>
+                <td>{{ data['feeds'][0]['field3'] }} lux</td>
+                {% if data['feeds'][0]['field3']|int > thresholds[0][4]|int and data['feeds'][0]['field3']|int <
+                    thresholds[0][5]|int %} <td class="ok">OK</td>
+                    {%else%}
+                    <td class="exceeded">Danger state</td>
+                    {% endif %}
+            </tr>
+            <tr>
+                <td>Soil Moisture</td>
+                <td>{{ thresholds[0][8] }} % - {{ thresholds[0][9] }} %</td>
+                <td>{{ data['feeds'][0]['field2'] }}%</td>
+                {% if data['feeds'][0]['field2']|int > thresholds[0][8]|int and data['feeds'][0]['field2']|int <
+                    thresholds[0][9]|int %} <td class="ok">OK</td>
+                    {%else%}
+                    <td class="exceeded">Danger state</td>
+                    {% endif %}
+            </tr>
+            <tr>
+                <td>SGP CO2</td>
+                <td>{{ thresholds[0][10] }} ppm - {{ thresholds[0][11] }} ppm</td>
+                <td>{{ data['feeds'][0]['field5'] }} ppm</td>
+                {% if data['feeds'][0]['field5']|int > thresholds[0][11]|int and data['feeds'][0]['field5']|int <
+                    thresholds[0][11]|int %} <td class="ok">OK</td>
+                    {%else%}
+                    <td class="exceeded">Danger state</td>
+                    {% endif %}
+            </tr>
+            <tr>
+                <td>SGP VOC</td>
+                <td>{{ thresholds[0][10] }} ppb - {{ thresholds[0][11] }} ppb</td>
+                <td>{{ data['feeds'][0]['field4'] }} ppb</td>
+                {% if data['feeds'][0]['field4']|int > thresholds[0][10]|int and data['feeds'][0]['field11']|int <
+                    thresholds[0][10]|int %} <td class="ok">OK</td>
+                    {%else%}
+                    <td class="exceeded">Danger state</td>
+                    {% endif %}
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="analysis-paragraph" style="padding: 20px;">
+    <h2>Project Analysis</h2>
+    <p>
+        The Smart Farming Pathogen Analysis project is designed to monitor various environmental parameters such as
+        temperature,
+        humidity, light intensity, soil moisture, and air quality (CO2 and VOC levels) in a farm setting. The threshold
+        analysis
+        provided on this page helps farmers identify potential issues, such as pathogen attacks. When a sensor reading
+        exceeds the
+        predefined threshold, it is marked as <b style="color: red;">"Danger state,"</b> signaling a potential problem.
+        Otherwise, it is marked as <b style="color: green;">"Ok."</b>
+        This real-time data analysis empowers farmers to take timely action to protect their crops and improve overall
+        farm productivity.
+    </p>
+</div>

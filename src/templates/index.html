@@ -95,14 +95,14 @@
             </li>
             <li class="user-profile dropdown dropdown-animated scale-left">
               <a href="/" class="dropdown-toggle" data-toggle="dropdown">
-                <img class="profile-img img-fluid" src="{{ url_for('static', filename=user[5]) }}" alt="profile-img" />
+                <img loading="lazy" class="profile-img img-fluid" src="{{ url_for('static', filename=user[5]) }}" alt="profile-img" />
               </a>
               <ul class="dropdown-menu dropdown-md">
                 <li>
                   <ul class="list-media">
                     <li class="list-item avatar-info">
                       <div class="media-img">
-                        <img src="{{ url_for('static', filename=user[5]) }}" alt="profile-img" />
+                        <img loading="lazy" src="{{ url_for('static', filename=user[5]) }}" alt="profile-img" />
                       </div>
                       <div class="info">
                         <span class="title text-semibold">{{user[2]}}</span>

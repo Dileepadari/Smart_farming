@@ -138,6 +138,12 @@ def receive_notif():
             msg = data['msg']
             plant_name = data['plant_name']
             notif_type = data['notif_type']
+            query = "SELECT * FROM notifications WHERE status=0"
+            results = curser.execute(query)
+            all_notifs = results.fetchall()
+            for notis in all_notifs:
+                if(notis[1] == plant_name and notis[2] == msg):
+                    return jsonify({"status": "error", "message": "already sent"})
             
             date_format = "%d-%m-%Y %H:%M"
             date_var = datetime.now().strftime(date_format)
@@ -161,7 +167,7 @@ def apply_query():
         if(data['secret'] == "secretanicheppaga"):
             query = data['query']
             results = curser.execute(query)
-            results = results.fetchall()
+            connection.commit()
             connection.close()
             return jsonify({"status": "success"})
         else:

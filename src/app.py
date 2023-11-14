@@ -51,7 +51,7 @@ def home():
     if "user_id" not in session:
         return redirect("/login") 
     headers = {'X-M2M-Origin': 'admin:admin', "Content-Type": "application/json;ty=4"}
-    link = "https://api.thingspeak.com/channels/2281910/feeds.json?results=2"
+    link = "https://api.thingspeak.com/channels/2281910/feeds.json?results=2&timezone=Asia/Kolkata"
     response = requests.get(link, headers=headers)
     response = json.loads(response.text)
     notif_list = get_notifs()
@@ -70,7 +70,7 @@ def analysis():
     if "user_id" not in session:
         return redirect("/login") 
     headers = {'X-M2M-Origin': 'admin:admin', "Content-Type": "application/json;ty=4"}
-    link = "https://api.thingspeak.com/channels/2281910/feeds.json?results=10"
+    link = "https://api.thingspeak.com/channels/2281910/feeds.json?results=10&timezone=Asia/Kolkata"
     response = requests.get(link, headers=headers)
     response = json.loads(response.text)
     notif_list = get_notifs()
@@ -125,19 +125,29 @@ def nologinabout():
 def settings():
     if "user_id" not in session:
         return redirect("/login") 
+    error = ""
     if(request.method == 'POST'):
-        connection = sqlite3.connect("Database.db")
-        curser = connection.cursor()
         name_var = request.form['name']
         plant_var = request.form['plant']
         reading_var = request.form['reading']
-        query = "UPDATE users SET Name = '"+name_var+"', plant = '"+plant_var+"', reading_no = '"+reading_var+"' WHERE Userid = 1"
-        print(query)
-        curser.execute(query)
-        connection.commit()
-        connection.close()
+        connection = sqlite3.connect("Database.db")
+        curser = connection.cursor()
+        query = "SELECT * FROM plants WHERE plant_name='{0}'".format(plant_var)
+        results = curser.execute(query)
+        ispresent = results.fetchall()
+        connection = sqlite3.connect("Database.db")
+        curser = connection.cursor()
+        error = ""
+        if(ispresent == []):
+            error="There is No such plant in the database"
+        else:
+            query = "UPDATE users SET Name = '"+name_var+"', plant = '"+plant_var+"', reading_no = '"+reading_var+"' WHERE Userid ={0}".format(str(session['user_id']))
+            print(query)
+            curser.execute(query)
+            connection.commit()
+            connection.close()
     notif_list = get_notifs()
-    return render_template('index.html',notifications = notif_list, user= get_user(), file = "settings.html", open8="open")
+    return render_template('index.html',notifications = notif_list, user= get_user(), file = "settings.html", open8="open", error=error)
 
 @app.route('/change_seen/<noti_id>')
 def change_seen(noti_id):

@@ -59,6 +59,10 @@
         </ol>
     </div>
 </div>
+{% if thresholds == [] %}
+<h2 style="text-align: center;">The plant selected by you is not in the database</h2>
+{% endif %}
+{% if thresholds != [] %}
 <h2 style="text-align: center;">Threshold Analysis for {{ thresholds[0][1] }} plant</h2>
 <div class="analysis-block">
     <table>
@@ -149,3 +153,4 @@
         farm productivity.
     </p>
 </div>
+{% endif %}

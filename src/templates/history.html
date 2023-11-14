@@ -134,7 +134,7 @@
         const toDate = toDateInput.value;
 
 
-        const url = `https://api.thingspeak.com/channels/${channelId}/feeds.json?api_key=${apiKey}&start=${fromDate}&end=${toDate}`;
+        const url = `https://api.thingspeak.com/channels/${channelId}/feeds.json?api_key=${apiKey}&start=${fromDate}&end=${toDate}&timezone=Asia/Kolkata`;
 
         fetch(url)
             .then(response => response.json())

@@ -38,7 +38,8 @@ def get_notifs():
 def get_user():
     connection = sqlite3.connect("Database.db")
     curser = connection.cursor()
-    query = "SELECT * FROM users WHERE Userid=1 LIMIT 1"
+    user_id = session['user_id']
+    query = "SELECT * FROM users WHERE Userid={0} LIMIT 1".format(user_id)
     results = curser.execute(query)
     results = results.fetchall()
     connection.close()
@@ -47,6 +48,8 @@ def get_user():
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/home', methods=['GET', 'POST'])
 def home():
+    if "user_id" not in session:
+        return redirect("/login") 
     headers = {'X-M2M-Origin': 'admin:admin', "Content-Type": "application/json;ty=4"}
     link = "https://api.thingspeak.com/channels/2281910/feeds.json?results=2"
     response = requests.get(link, headers=headers)
@@ -57,11 +60,15 @@ def home():
 
 @app.route('/statistics', methods=['GET','POST'])
 def statistics():
+    if "user_id" not in session:
+        return redirect("/login") 
     notif_list = get_notifs()
     return render_template('index.html',notifications = notif_list,user= get_user(), file = "statistics.html", open2="open")
     
 @app.route('/analysis', methods=['GET','POST'])
 def analysis():
+    if "user_id" not in session:
+        return redirect("/login") 
     headers = {'X-M2M-Origin': 'admin:admin', "Content-Type": "application/json;ty=4"}
     link = "https://api.thingspeak.com/channels/2281910/feeds.json?results=10"
     response = requests.get(link, headers=headers)
@@ -78,16 +85,22 @@ def analysis():
 
 @app.route('/circuit', methods=['GET','POST'])
 def circuit():
+    if "user_id" not in session:
+        return redirect("/login") 
     notif_list = get_notifs()
     return render_template('index.html', notifications = notif_list,user= get_user(), file = "circuit.html", open4="open")
 
 @app.route('/history', methods=['GET','POST'])
 def history():
+    if "user_id" not in session:
+        return redirect("/login") 
     notif_list = get_notifs()
     return render_template('index.html', notifications = notif_list, user= get_user(), file = "history.html", open5="open")
 
 @app.route('/alerts', methods=['GET','POST'])
 def alerts():
+    if "user_id" not in session:
+        return redirect("/login") 
     notif_list = get_notifs()
     connection = sqlite3.connect("Database.db")
     curser = connection.cursor()
@@ -98,11 +111,20 @@ def alerts():
     
 @app.route('/about', methods=['GET','POST'])
 def about():
+    if "user_id" not in session:
+        return redirect("/login") 
     notif_list = get_notifs()
     return render_template('index.html',notifications = notif_list, user= get_user(), file = "about.html", open7="open")
 
+
+@app.route('/nologinabout', methods=['GET','POST'])
+def nologinabout():
+    return render_template('about.html')
+
 @app.route('/settings', methods=['GET','POST'])
 def settings():
+    if "user_id" not in session:
+        return redirect("/login") 
     if(request.method == 'POST'):
         connection = sqlite3.connect("Database.db")
         curser = connection.cursor()
@@ -119,6 +141,8 @@ def settings():
 
 @app.route('/change_seen/<noti_id>')
 def change_seen(noti_id):
+    if "user_id" not in session:
+        return redirect("/login") 
     connection = sqlite3.connect("Database.db")
     curser = connection.cursor()
     query = "UPDATE notifications SET status = 1 WHERE notification_id = "+noti_id
@@ -126,6 +150,64 @@ def change_seen(noti_id):
     connection.commit()
     connection.close()
     return redirect('/alerts')
+
+
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    if request.method == 'POST':
+        connection = sqlite3.connect("Database.db")
+        curser = connection.cursor()
+        username = request.form['username']
+        email = request.form['email']
+        password = request.form['password']
+        name = request.form['name']
+        plant = request.form['plant']
+        init_reading = request.form['init_read']
+
+        query = "SELECT * FROM users WHERE username ='{0}' or email = '{1}';".format(username, email) 
+        result = curser.execute(query)
+        data = result.fetchone()
+        if(data):
+            return render_template("signup.html",error="User already exists")
+        else:
+            query = "INSERT INTO users (username,email, password, Name, plant, reading_no) VALUES (?,?,?,?,?,?);"
+            result = curser.execute(query, (username,email,password, name, plant, init_reading))
+            print(query)
+            connection.commit()
+            query = "SELECT * FROM users WHERE username ='{0}';".format(username) 
+            result = curser.execute(query)
+            data = result.fetchone()
+            session['user_id'] = data[0]
+            return redirect("/")
+    return render_template("signup.html")
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+
+        connection = sqlite3.connect("Database.db")
+        curser = connection.cursor()
+        query = "SELECT * FROM Users WHERE email ='{0}';".format(username) 
+        result = curser.execute(query)
+        data = result.fetchone()
+        if(data and str(data[3]) == str(password)):
+            print(data)
+            session['user_id'] = data[0]
+            return redirect("/")
+        else:
+            return render_template("login.html",error=True)
+    return render_template("login.html")
+
+@app.route('/logout')
+def logout():
+    session.pop('user_id', None)
+    return redirect('/login')
+
+
+
 
 @app.route('/receive', methods=['GET','POST'])
 def receive_notif():
@@ -158,7 +240,7 @@ def receive_notif():
         return jsonify({"status": "error", "message": "you don't have access to it"})
 
 @app.route('/query', methods=['GET', 'POST'])
-def apply_query():
+def apply_query():  
     if(request.method == 'POST'):
         connection = sqlite3.connect("Database.db")
         curser = connection.cursor()

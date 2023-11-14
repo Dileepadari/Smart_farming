@@ -1,0 +1,69 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title> greenplant | Register </title>
+    <link rel="stylesheet" href="../static/styles/register.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   
+   
+
+<body>
+  <div class="big">
+  <div class="container">
+    
+    <div class="cover">
+      <div class="front">
+        <img src="../static/images/IOTfarm.jpg" alt="">
+        <div class="text">
+          <span class="text-1">A plant always<br> makes your life better</span>
+          <span class="text-2">Let's start farming with IOT Support</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <div class="title">Register</div>
+          <form method="POST" action="/signup">
+            <div class="input-boxes">
+               <div class="input-box">
+                <input type="text"  name="username" placeholder="Enter your username" required>
+              </div>
+              <div class="input-box">
+                <input type="text"  name="name" placeholder="Enter your Full name" required>
+              </div>
+              <div class="input-box">
+    
+                <input type="text" name="email" placeholder="Enter your email" required>
+              </div>
+          <div class="input-box"> 
+                
+                <input type="password" name="password" placeholder="Enter your Password" required>
+              </div>
+              
+              <div class="input-box">
+    
+                <input type="text" name="plant" placeholder="Enter your Plant Preference" required>
+              </div>
+              <div class="input-box">
+    
+                <input type="text" name="init_read" placeholder="Enter your intitial choice of no of plots" required>
+              </div>
+              <div class="button input-box">
+                <input type="submit" value="Sumbit">
+              </div>
+              {% if error %}
+                 <h3 style="color:red;text-align: center;">User already Exists</h3>
+                {% endif %}
+              <br>
+              <div class="text sign-up-text">Don't have an account? <a href="/login" style="color:red;">Login now</a></div>
+            </div>
+        </form>
+     
+      </div>
+           </div>
+  </div>
+  </div>
+</body>

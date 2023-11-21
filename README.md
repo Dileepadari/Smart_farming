@@ -29,9 +29,10 @@ Working Principle :
 - The ASIC then converts these changes into digital signals , which are used to calculate the gas concentrations.
 
 `LDR Sensor`:   
-- It works on the principle of photoconductivity.Whenever the light falls on its photoconductive material, it absorbs its energy and the electrons of that photoconductive material in the valence band get excited and go to the conduction band,thus conductivity increases,resistivity decreases.Hence increase in light intensity results to decrease in resistance.We get the resistance value as the output.the range for ldr sensor is (0-1000)ohm.
-- we are displaying the reading in light_intensity(0-100) calculated by light_intensity=(1000-sensor.output)/10
-- light_intensity=0 means dark and light_intensity=100 means maximum light intensity</p>
+- The LDR sensor operates on the principle of photoconductivity. When exposed to light, its photoconductive material absorbs energy, causing electrons to move from the valence band to the conduction band. This transition increases conductivity and decreases resistivity, resulting in a measurable decrease in resistance within the range of 0 to 1000 ohms.
+- For clarity, we convert the sensor's resistance output to a light intensity value using the formula:
+	Light Intensity=(1000−Sensor Output)10Light Intensity=10(1000−Sensor Output)​
+- This formula produces a light intensity reading between 0 and 100. A light intensity of 0 indicates darkness, while 100 signifies maximum light intensity. This conversion allows for a precise interpretation of the sensor's output in relation to the prevailing light conditions.
 
 ## Implementation
 

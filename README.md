@@ -53,8 +53,8 @@ The implementation of the project had various phases including sensor integratio
 ## How To Use ?
 - The setup of the circuit circuit should as following:
 <div style="display: flex;justify-content: space-around;">
-<img src="https://github.com/Dileepadari/Smart_farming/tree/main/project_photos/circ.jpeg" width="40%" alt="circuit 1"><br>
-<img src="https://github.com/Dileepadari/Smart_farming/tree/main/project_photos/circuit.jpeg" width="50%"alt="circuit 2">
+<img src="project_photos/circ.jpeg" width="40%" alt="circuit 1"><br>
+<img src="project_photos/circuit.jpeg" width="50%"alt="circuit 2">
 </div>  
 
 ## OM2M

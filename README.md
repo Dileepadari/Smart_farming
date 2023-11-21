@@ -48,7 +48,7 @@ The implementation of the project had various phases including sensor integratio
 
 ## How To Use ?
 - The setup of the circuit circuit should as following:
-![Ciruit](project_photos/circuit.jpeg)
+![Ciruit](project_photos/circ.jpeg) ![Ciruit](project_photos/circuit.jpeg)
 
 ## OM2M
 The OM2M is provided as folder such that the setup should be run from the ecllipse/in-cse/

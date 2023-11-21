@@ -28,11 +28,10 @@ Working Principle :
 - `SGP30` mainly measures the concentrations of CO<sub>2</sub> and TVOCs.The MOX sensor reacts to the presence of these gases ,causing changes in it's electric conductivity.
 - The ASIC then converts these changes into digital signals , which are used to calculate the gas concentrations.
 
-`LDR Sensor`:<br>
-<p>It works on the principle of photoconductivity.Whenever the light falls on its photoconductive material, it absorbs its energy and the electrons of that photoconductive material in the valence band get excited and go to the conduction band,thus conductivity increases,resistivity decreases.Hence increase in light intensity results to decrease in resistance.We get the resistance value as the output.the range for ldr sensor is (0-1000)ohm.
-we are displaying the reading in light_intensity(0-100) calculated by</p>
-<p>light_intensity=(1000-sensor.output)/10</p>
-<p>light_intensity=0 means dark and light_intensity=100 means maximum light intensity</p>
+`LDR Sensor`:   
+- It works on the principle of photoconductivity.Whenever the light falls on its photoconductive material, it absorbs its energy and the electrons of that photoconductive material in the valence band get excited and go to the conduction band,thus conductivity increases,resistivity decreases.Hence increase in light intensity results to decrease in resistance.We get the resistance value as the output.the range for ldr sensor is (0-1000)ohm.
+- we are displaying the reading in light_intensity(0-100) calculated by light_intensity=(1000-sensor.output)/10
+- light_intensity=0 means dark and light_intensity=100 means maximum light intensity</p>
 
 ## Implementation
 

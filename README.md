@@ -66,7 +66,7 @@ To use the website, the user should register an account giving the required info
 
 The user can change the preference of their plant monitoring. He can edit the number of readings that should be plotted for the statistics plots for every sensor.
 
-The website is responsive and user friendly such that it can be explored at [greenplant](greenplant.pythonanywhere.com) website.
+The website is responsive and user friendly such that it can be explored at [greenplant](http://greenplant.pythonanywhere.com/) website.
 
 ## Web Pages
 - Home Page : Consists of the current values of sensors and Plot of VOC values​  

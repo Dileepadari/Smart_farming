@@ -6,6 +6,7 @@
 	
 ## Motivation
 <p style = "color :#16DE2A;">Our IoT system addresses the critical challenge of timely pathogen detection in crops, aiming to revolutionize agriculture. Traditional methods often fail to provide early indicators, leading to significant economic losses. By integrating VOC sensors with temperature, humidity, light, and gas sensors, we offer a holistic approach for comprehensive plant health monitoring. The deployment on an experimental farm enables real-time data collection, refining our understanding of environmental parameters and stress responses. This innovative solution empowers farmers with timely information, enhancing crop resilience, reducing losses, and contributing to the sustainability of global food production.</p>
+
 ## Sensors 
 
 `DHT(11)` :  Temperature & Humidity (Range: Temp -> 0 - 50 C ; Humidity -> )
@@ -25,9 +26,9 @@ Working Principle :
 
 `LDR Sensor`:<br>
 <p>It works on the principle of photoconductivity.Whenever the light falls on its photoconductive material, it absorbs its energy and the electrons of that photoconductive material in the valence band get excited and go to the conduction band,thus conductivity increases,resistivity decreases.Hence increase in light intensity results to decrease in resistance.We get the resistance value as the output.the range for ldr sensor is (0-1000)ohm.
-we are displaying the reading in light_intensity(0-100) calculated by</p><br>
+we are displaying the reading in light_intensity(0-100) calculated by</p>
 <p>light_intensity=(1000-sensor.output)/10</p>
-<br><p>light_intensity=0 means dark and light_intensity=100 means maximum light intensity</p>
+<p>light_intensity=0 means dark and light_intensity=100 means maximum light intensity</p>
 
 ## Implementation
 

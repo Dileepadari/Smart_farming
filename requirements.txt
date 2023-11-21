@@ -1,1 +1,8 @@
 flask
+OM2M
+json
+requests
+sqlite3
+datetime
+Thingspeak_account
+jquery

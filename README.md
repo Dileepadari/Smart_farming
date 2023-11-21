@@ -48,7 +48,10 @@ The implementation of the project had various phases including sensor integratio
 
 ## How To Use ?
 - The setup of the circuit circuit should as following:
-![Ciruit](project_photos/circ.jpeg) ![Ciruit](project_photos/circuit.jpeg)
+<div style="display: flex;justify-content: space-around;">
+<img src="project_photos/circ.jpeg" width="40%" alt="circuit 1"><br>
+<img src="project_photos/circuit.jpeg" width="50%"alt="circuit 2">
+</div>
 
 ## OM2M
 The OM2M is provided as folder such that the setup should be run from the ecllipse/in-cse/
@@ -62,11 +65,13 @@ The user can change the preference of their plant monitoring. He can edit the nu
 The website is responsive and user friendly such that it can be explored at [greenplant](greenplant.pythonanywhere.com) website.
 
 ## Web Pages
-- Home Page : Consists of the current values of sensors and Plot of VOC values​
+- Home Page : Consists of the current values of sensors and Plot of VOC values​  
+
 ![Graph image](project_photos/home.jpeg)
 <br><br>
 
-- Statistics Page : Consists of Graphs of sensor data retrieved from Thingspeak.​
+- Statistics Page : Consists of Graphs of sensor data retrieved from Thingspeak.​  
+
 ![Graph image](project_photos/stat.jpeg)
 <br><br>
 
@@ -105,6 +110,11 @@ The website is responsive and user friendly such that it can be explored at [gre
 
 ## Analysis
 - Graphs for shown in the Statistics page of the website of each sensor.The data obtained is Analysed and compared with the Threshold value of the selected plant.The Status shown in Analysis page is based on the values of Threshold values and Current values.
+
+## Important links
+- [Website link](http://greenplant.pythonanywhere.com/)
+- [file_to_start_OM2M]();
+- [Arduino_code](https://github.com/Dileepadari/Smart_farming/blob/main/Arduino/ESW_Project.ino);
 
 ## Credits
 Dileepkumar Adari  

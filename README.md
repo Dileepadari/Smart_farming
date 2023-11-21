@@ -48,7 +48,7 @@ The implementation of the project had various phases including sensor integratio
 
 ## How To Use ?
 - The setup of the circuit circuit should as following:
-![Ciruit]()
+![Ciruit](project_photos/circuit.jpeg)
 
 ## OM2M
 The OM2M is provided as folder such that the setup should be run from the ecllipse/in-cse/
@@ -63,44 +63,44 @@ The website is responsive and user friendly such that it can be explored at [gre
 
 ## Web Pages
 - Home Page : Consists of the current values of sensors and Plot of VOC values​
-![Graph image](screenshots/home.jpeg)
+![Graph image](project_photos/home.jpeg)
 <br><br>
 
 - Statistics Page : Consists of Graphs of sensor data retrieved from Thingspeak.​
-![Graph image](screenshots/home.jpeg)
+![Graph image](project_photos/stat.jpeg)
 <br><br>
 
 - Analysis Page : Consists threshold values of each sensor for the Plant selected by the user and the current values of each sensor. ​
 
-![Graph image](screenshots/analysis.jpeg)
+![Graph image](project_photos/analysis.jpeg)
 <br><br>
 
 - Circuit Page : Consists of the entire circuit diagram of the system.​
 
-![Graph image](screenshots/circuit.jpeg)
+![Graph image](project_photos/circuit.jpeg)
 <br><br>
 
 - History Page : Here the user can select Dates in which they want to see the sensor data generated between the timeline.​
 
-![Graph image](screenshots/history.jpeg)
+![Graph image](project_photos/history.jpeg)
 <br><br>
 
 - Alerts Page : When the current values of the sensors are not in the range of threshold values an alert is generated and is shown in Alerts Page.
 
 ​
-![Graph image](screenshots/alerts.jpeg)
+![Graph image](project_photos/alerts.jpeg)
 <br><br>
 
 - About Page : Consists of the information of the project and team members.​
 
-![Graph image](screenshots/about.jpeg)
+![Graph image](project_photos/about.jpeg)
 <br><br>
 
 - Settings Page : Here the user can make certain changes:​
     - The user can choose the number of values for observation in the Statistics Page.​
     - The user can change Plant and if the Plant is present in the Database then the corresponding Threshold values are shown in the Analysis Page.
     
-![Graph image](screenshots/settings.jpeg)
+![Graph image](project_photos/settings.jpeg)
 <br><br>
 
 ## Analysis

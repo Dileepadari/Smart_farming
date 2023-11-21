@@ -71,45 +71,45 @@ The website is responsive and user friendly such that it can be explored at [gre
 ## Web Pages
 - Home Page : Consists of the current values of sensors and Plot of VOC values​  
 
-![Graph image](https://github.com/Dileepadari/Smart_farming/tree/main/project_photos/home.jpeg)   
+![Graph image](/project_photos/home.jpeg)   
     
 
 - Statistics Page : Consists of Graphs of sensor data retrieved from Thingspeak.​  
 
-![Graph image](https://github.com/Dileepadari/Smart_farming/tree/main/project_photos/stat.jpeg)    
+![Graph image](/project_photos/stat.jpeg)    
      
 
 - Analysis Page : Consists threshold values of each sensor for the Plant selected by the user and the current values of each sensor. ​   
      
-![Graph image](https://github.com/Dileepadari/Smart_farming/tree/main/project_photos/analysis.jpeg)    
+![Graph image](/project_photos/analysis.jpeg)    
        
      
 - Circuit Page : Consists of the entire circuit diagram of the system.​     
        
-![Graph image](https://github.com/Dileepadari/Smart_farming/tree/main/project_photos/circuit.jpeg)     
+![Graph image](/project_photos/circuit.jpeg)     
        
       
 - History Page : Here the user can select Dates in which they want to see the sensor data generated between the timeline.     ​
       
-![Graph image](https://github.com/Dileepadari/Smart_farming/tree/main/project_photos/history.jpeg)     
+![Graph image](/project_photos/history.jpeg)     
       
       
 - Alerts Page : When the current values of the sensors are not in the range of threshold values an alert is generated and is shown in Alerts Page.     
     
      
-![Graph image](https://github.com/Dileepadari/Smart_farming/tree/main/project_photos/alerts.jpeg)     
+![Graph image](/project_photos/alerts.jpeg)     
      
 
 - About Page : Consists of the information of the project and team members.​   
     
-![Graph image](https://github.com/Dileepadari/Smart_farming/tree/main/project_photos/about.jpeg)    
+![Graph image](/project_photos/about.jpeg)    
      
 
 - Settings Page : Here the user can make certain changes:​   
     - The user can choose the number of values for observation in the Statistics Page.​
     - The user can change Plant and if the Plant is present in the Database then the corresponding Threshold values are shown in the Analysis Page.   
 
-![Graph image](https://github.com/Dileepadari/Smart_farming/tree/main/project_photos/settings.jpeg)  
+![Graph image](/project_photos/settings.jpeg)  
      
 
 ## Analysis
@@ -117,8 +117,8 @@ The website is responsive and user friendly such that it can be explored at [gre
 
 ## Important links
 - [Website link](http://greenplant.pythonanywhere.com/)   
-- [file_to_start_OM2M](https://github.com/Dileepadari/Smart_farming/blob/main/eclipse-om2m-v1-4-1/in-cse/start.sh)    
-- [Arduino_code](https://github.com/Dileepadari/Smart_farming/blob/main/Arduino/ESW_Project.ino)                                                                                            
+- [file_to_start_OM2M](/eclipse-om2m-v1-4-1/in-cse/start.sh)    
+- [Arduino_code](/Arduino/ESW_Project.ino)                                                                                            
 
 ## Credits
 Dileepkumar Adari    

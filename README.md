@@ -39,10 +39,48 @@ Working Principle :
 ## How To Use ?
 
 ## Web Pages
+- Home Page : Consists of the current values of sensors and Plot of VOC values​
+![Graph image](screenshots/home.jpeg)
+<br><br>
 
-## Data Collection
+- Statistics Page : Consists of Graphs of sensor data retrieved from Thingspeak.​
+![Graph image](screenshots/home.jpeg)
+<br><br>
+
+- Analysis Page : Consists threshold values of each sensor for the Plant selected by the user and the current values of each sensor. ​
+
+![Graph image](screenshots/analysis.jpeg)
+<br><br>
+
+- Circuit Page : Consists of the entire circuit diagram of the system.​
+
+![Graph image](screenshots/circuit.jpeg)
+<br><br>
+
+- History Page : Here the user can select Dates in which they want to see the sensor data generated between the timeline.​
+
+![Graph image](screenshots/history.jpeg)
+<br><br>
+
+- Alerts Page : When the current values of the sensors are not in the range of threshold values an alert is generated and is shown in Alerts Page.
+
+​
+![Graph image](screenshots/alerts.jpeg)
+<br><br>
+
+- About Page : Consists of the information of the project and team members.​
+
+![Graph image](screenshots/about.jpeg)
+<br><br>
+
+- Settings Page : Here the user can make certain changes:​
+    - The user can choose the number of values for observation in the Statistics Page.​
+    - The user can change Plant and if the Plant is present in the Database then the corresponding Threshold values are shown in the Analysis Page.
+    
+![Graph image](screenshots/settings.jpeg)
+<br><br>
 
 ## Analysis
-
+- Graphs for shown in the Statistics page of the website of each sensor.The data obtained is Analysed and compared with the Threshold value of the selected plant.The Status shown in Analysis page is based on the values of Threshold values and Current values.
 
 ## Credits

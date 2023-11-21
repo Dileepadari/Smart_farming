@@ -1,0 +1,3 @@
+[submodule "OM2M_ESW"]
+	path = OM2M_ESW
+	url = https://github.com/Dileepadari/OM2M.git

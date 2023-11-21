@@ -117,7 +117,7 @@ The website is responsive and user friendly such that it can be explored at [gre
 
 ## Important links
 - [Website link](http://greenplant.pythonanywhere.com/)   
-- [file_to_start_OM2M](/eclipse-om2m-v1-4-1/in-cse/start.sh)    
+- [file_to_start_OM2M](https://github.com/Dileepadari/OM2M/eclipse-om2m-v1-4-1/in-cse/start.sh)    
 - [Arduino_code](/Arduino/ESW_Project.ino)                                                                                            
 
 ## Credits

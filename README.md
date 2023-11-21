@@ -31,9 +31,7 @@ Working Principle :
 `LDR Sensor`:   
 - The LDR sensor operates on the principle of photoconductivity. When exposed to light, its photoconductive material absorbs energy, causing electrons to move from the valence band to the conduction band. This transition increases conductivity and decreases resistivity, resulting in a measurable decrease in resistance within the range of 0 to 1000 ohms.
 - For clarity, we convert the sensor's resistance output to a light intensity value using the formula:
-```math```
-Light Intensity=(1000−Sensor Output)10Light Intensity=10(1000−Sensor Output)​
-```math```
+            Light Intensity=(1000−Sensor Output)10Light Intensity=10(1000−Sensor Output)​
 - This formula produces a light intensity reading between 0 and 100. A light intensity of 0 indicates darkness, while 100 signifies maximum light intensity. This conversion allows for a precise interpretation of the sensor's output in relation to the prevailing light conditions.
 
 ## Implementation

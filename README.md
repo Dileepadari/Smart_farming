@@ -5,7 +5,7 @@
  <p style = "color :#16DE2A;">Propose an IOT system to sense VOCs for accurately predicting onset of pathogen attack on the plant. A network on VOC sensor, temperature, humidity (soil), light, O2/CO2 can be deployed on the farm. In the project, these above mentioned sensor will be interfaced and deployed on an experimental farm (plants). Response to any stress introduced will be recorded via change in temperature, humidity & VOC levels of the plants.</p>
 	
 ## Motivation
-<p style = "color :#16DE2A;">Our IoT system addresses the critical challenge of timely pathogen detection in crops, aiming to revolutionize agriculture. Traditional methods often fail to provide early indicators, leading to significant economic losses. By integrating VOC sensors with temperature, humidity, light, and gas sensors, we offer a holistic approach for comprehensive plant health monitoring. The deployment on an experimental farm enables real-time data collection, refining our understanding of environmental parameters and stress responses. This innovative solution empowers farmers with timely information, enhancing crop resilience, reducing losses, and contributing to the sustainability of global food production.</p>
+<p style>Our IoT system addresses the critical challenge of timely pathogen detection in crops, aiming to revolutionize agriculture. Traditional methods often fail to provide early indicators, leading to significant economic losses. By integrating VOC sensors with temperature, humidity, light, and gas sensors, we offer a holistic approach for comprehensive plant health monitoring. The deployment on an experimental farm enables real-time data collection, refining our understanding of environmental parameters and stress responses. This innovative solution empowers farmers with timely information, enhancing crop resilience, reducing losses, and contributing to the sustainability of global food production.</p>
 
 ## Sensors 
 `DHT(11)` :   
@@ -47,8 +47,8 @@ The implementation of the project had various phases including sensor integratio
 
 
 ## How To Use ?
-- The setup of the circuit should as following:
-
+- The setup of the circuit circuit should as following:
+![Ciruit]()
 
 ## OM2M
 The OM2M is provided as folder such that the setup should be run from the ecllipse/in-cse/
@@ -107,8 +107,10 @@ The website is responsive and user friendly such that it can be explored at [gre
 - Graphs for shown in the Statistics page of the website of each sensor.The data obtained is Analysed and compared with the Threshold value of the selected plant.The Status shown in Analysis page is based on the values of Threshold values and Current values.
 
 ## Credits
-Dileepkumar Adari
-Revanth Reddy
-Karthikeya Chaganti
-Gajawada Bharath
+Dileepkumar Adari  
+Revanth Reddy  
+Karthikeya Chaganti  
+Gajawada Bharath  
+
+@ Copyright Aakashavani
 

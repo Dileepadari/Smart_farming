@@ -55,7 +55,14 @@ The implementation of the project had various phases including sensor integratio
 <div style="display: flex;justify-content: space-around;">
 <img src="project_photos/circ.jpeg" width="40%"  height="300px" alt="circuit 1">
 <img src="project_photos/circuit.jpeg" width="50%" height="300px" style="object-fit:scale-down;" alt="circuit 2">
-</div>  
+</div>    
+<br>
+
+- The ESP32 is connected to the sensors and the sensors are connected to the power supply and the ESP32 is connected to the laptop using the USB cable.
+- The code should be adjusted as follows:  
+  - change the CSE_IP to the ip of laptop  
+  - change the wifi details (ssid and password) 
+  - change the thingspeak channel id, api key and other mqtt details.
 
 ### OM2M
 The OM2M is provided as folder such that the setup should be run from the eclipse-om2m-v1-4-1/in-cse/start.sh  

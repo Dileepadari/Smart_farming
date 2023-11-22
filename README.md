@@ -58,8 +58,8 @@ The implementation of the project had various phases including sensor integratio
 </div>  
 
 ### OM2M
-The OM2M is provided as folder such that the setup should be run from the eclipse-om2m-v1-4-1/in-cse/start.sh
-
+The OM2M is provided as folder such that the setup should be run from the eclipse-om2m-v1-4-1/in-cse/start.sh  
+[OM2M link](https://github.com/Dileepadari/OM2M.git)
 
 ### Website Usage:
 To use the website, the user should register an account giving the required info, or can use by default provided login details in the login page to test the web
@@ -116,6 +116,7 @@ The website is responsive and user friendly such that it can be explored at [gre
 - Graphs for shown in the Statistics page of the website of each sensor.The data obtained is Analysed and compared with the Threshold value of the selected plant.The Status shown in Analysis page is based on the values of Threshold values and Current values.     
 
 ## Important links (Appendix)
+The ppts are referenced in the ppt folder and below are some important links.
 - [Website link](http://greenplant.pythonanywhere.com/)   
 - [github](https://github.com/Dileepadari/Smart_farming.git)
 - [file_to_start_OM2M](https://github.com/Dileepadari/OM2M/blob/main/eclipse-om2m-v1-4-1/in-cse/start.sh)    

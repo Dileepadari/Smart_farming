@@ -51,13 +51,13 @@ The implementation of the project had various phases including sensor integratio
 
 
 ## How To Use ?
-- The setup of the circuit circuit should as following:
+- The setup of the circuit should be as following:
 <div style="display: flex;justify-content: space-around;">
 <img src="project_photos/circ.jpeg" width="40%" alt="circuit 1"><br>
 <img src="project_photos/circuit.jpeg" width="50%"alt="circuit 2">
 </div>  
 
-## OM2M
+### OM2M
 The OM2M is provided as folder such that the setup should be run from the eclipse-om2m-v1-4-1/in-cse/start.sh
 
 
@@ -71,54 +71,55 @@ The website is responsive and user friendly such that it can be explored at [gre
 ## Web Pages
 - Home Page : Consists of the current values of sensors and Plot of VOC values​  
 
-![Graph image](/project_photos/home.jpeg)   
+![Graph image](project_photos/home.jpeg)   
     
 
-- Statistics Page : Consists of Graphs of sensor data retrieved from Thingspeak.​  
+- Statistics Page : Consists of Graphs/Plots of sensor data retrieved from Thingspeak.​  
 
-![Graph image](/project_photos/stat.jpeg)    
+![Graph image](project_photos/stat.jpeg)    
      
 
-- Analysis Page : Consists threshold values of each sensor for the Plant selected by the user and the current values of each sensor. ​   
+- Analysis Page : Consists threshold values of each sensor for the Plant selected by the user and the current values of each sensor and health of the plant at that point of time. ​   
      
-![Graph image](/project_photos/analysis.jpeg)    
+![Graph image](project_photos/analysis.jpeg)    
        
      
 - Circuit Page : Consists of the entire circuit diagram of the system.​     
        
-![Graph image](/project_photos/circuit.jpeg)     
+![Graph image](project_photos/circuit_p.jpeg)     
        
       
-- History Page : Here the user can select Dates in which they want to see the sensor data generated between the timeline.     ​
+- History Page : Here the user can select Dates in which they want to see the sensor data recorded between the timeline.     ​
       
-![Graph image](/project_photos/history.jpeg)     
+![Graph image](project_photos/history.jpeg)     
       
       
 - Alerts Page : When the current values of the sensors are not in the range of threshold values an alert is generated and is shown in Alerts Page.     
     
      
-![Graph image](/project_photos/alerts.jpeg)     
+![Graph image](project_photos/alerts.jpeg)     
      
 
 - About Page : Consists of the information of the project and team members.​   
     
-![Graph image](/project_photos/about.jpeg)    
+![Graph image](project_photos/about.jpeg)    
      
 
 - Settings Page : Here the user can make certain changes:​   
     - The user can choose the number of values for observation in the Statistics Page.​
-    - The user can change Plant and if the Plant is present in the Database then the corresponding Threshold values are shown in the Analysis Page.   
+    - The user can change Plant and if the Plant is present in the Database then the corresponding Threshold values are shown in the Analysis Page otherwise it prompts that there is no such plant.   
 
-![Graph image](/project_photos/settings.jpeg)  
+![Graph image](project_photos/settings.jpeg)  
      
 
 ## Analysis
 - Graphs for shown in the Statistics page of the website of each sensor.The data obtained is Analysed and compared with the Threshold value of the selected plant.The Status shown in Analysis page is based on the values of Threshold values and Current values.     
 
-## Important links
+## Important links (Appendix)
 - [Website link](http://greenplant.pythonanywhere.com/)   
-- [file_to_start_OM2M](https://github.com/Dileepadari/OM2M/eclipse-om2m-v1-4-1/in-cse/start.sh)    
-- [Arduino_code](/Arduino/ESW_Project.ino)                                                                                            
+- [github](https://github.com/Dileepadari/Smart_farming.git)
+- [file_to_start_OM2M](https://github.com/Dileepadari/OM2M/blob/main/eclipse-om2m-v1-4-1/in-cse/start.sh)    
+- [Arduino_code](https://github.com/Dileepadari/Smart_farming/blob/main/Arduino/ESW_Project.ino)                                                                                            
 
 ## Credits
 Dileepkumar Adari    

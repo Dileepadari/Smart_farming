@@ -53,8 +53,8 @@ The implementation of the project had various phases including sensor integratio
 ## How To Use ?
 - The setup of the circuit circuit should as following:
 <div style="display: flex;justify-content: space-around;">
-<img src="project_photos/circ.jpeg" width="40%"  height="auto" alt="circuit 1">
-<img src="project_photos/circuit.jpeg" width="50%" height="auto" style="object-fit:scale-down;" alt="circuit 2">
+<img src="project_photos/circ.jpeg" width="40%"  height="600px" alt="circuit 1">
+<img src="project_photos/circuit.jpeg" width="50%" height="600px" style="object-fit:scale-down;" alt="circuit 2">
 </div>  
 
 ## OM2M
